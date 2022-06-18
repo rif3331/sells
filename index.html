@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <style>
+        .image {
+            width: 300px;
+            height: 200px;
+            opacity: 1;
+            display: block;
+            transition: .5s ease;
+            backface-visibility: hidden;
+            background-image: none;
+            border-style: solid;
+        }
+    </style>
+    <script type="text/javascript">
+        function changeBackground(url) {
+            for (var i = 0; i < imageUrl.length; i++) {
+           document.getElementById("products"+i.toString()).style.backgroundImage = "url("+url+")";
+            }
+        }
+
+        const imageUrl = new Array(
+            "https://i.im.ge/2022/06/18/rGo2Oh.png",
+            "https://i.im.ge/2022/06/18/rGoFyX.png",
+            "https://i.im.ge/2022/06/18/rGoTTz.png"
+        );
+        function displayProducts() {
+            var tableProducts = document.getElementById("displayProducts");
+            for (var i = 0; i < imageUrl.length; i++) {
+                var row = tableProducts.insertRow(-1);
+                var cell1 = row.insertCell(0);
+                // cell1.style.backgroundColor = "black";
+                cell1.style.opacity = "0.8";
+                cell1.innerHTML = "<img id='products" + i.toString() + "' src='" + imageUrl[i] + "' class='image'>";
+            }
+
+        }
+    </script>
+
+</head>
+
+<body onload="displayProducts()">
+    
+    <table id="displayProducts">
+    </table>
+    <input style="position:absolute;top: 0px ;" onclick="changeBackground('https://i.im.ge/2022/06/18/rGaeQp.png')" id="backgroundEdit" type="button" value="מנורות">
+
+
+</body>
+
+</html>
