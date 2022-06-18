@@ -32,14 +32,13 @@
 
 
         .image {
-            width: 200px;
+            width: 194px;
             height: 200px;
             opacity: 1;
             display: block;
             transition: .5s ease;
             backface-visibility: hidden;
             background-image: none;
-            border-style: solid;
         }
     </style>
     <script>
@@ -76,7 +75,58 @@
                 document.getElementById("products" + i.toString()).style.backgroundImage = "url(" + url + ")";
             }
         }
-
+        const nameProduct = new Array(
+            "שמלה צהובה",
+            "נעלי ג'ורדן",
+            "מגפיים",
+            "מכנס קצר",
+            "כובע אדום",
+            "תיק צד",
+            "שעון",
+            "כובע",
+            "שמלה לבנה",
+            "שמלה שחורה",
+            "מגפיים",
+            "כובע לבן",
+            "שמלה צהובה",
+            "מגפיים",
+            "מגפיים",
+            "כובע לבן",
+            "מגפיים",
+            "חולצה ירוקה",
+            "כובע לבן",
+            "שמלה כחולה",
+            "שמלה צהובה",
+            "כובע שחור",
+            "שמלה ירוקה",
+            "כובע לבן"
+        );
+        const price = new Array(
+            "422",
+            "355.5",
+            "220",
+            "400",
+            "300",
+            "200",
+            "600",
+            "1000",
+            "400",
+            "450",
+            "150",
+            "300",
+            "15",
+            "300",
+            "80",
+            "100",
+            "120",
+            "105",
+            "205",
+            "400",
+            "450",
+            "150",
+            "300",
+            "442"
+        );
         const imageUrl = new Array(
             "https://i.im.ge/2022/06/18/rGo2Oh.png",
             "https://i.im.ge/2022/06/18/rGoFyX.png",
@@ -108,11 +158,19 @@
 
 
             for (var i = 0; i < imageUrl.length; i++) {
+
+
                 if (i % 3 == 0)
                     var row = tableProducts.insertRow(-1);
                 var cell1 = row.insertCell(0);
-                cell1.style.opacity = "0.8";
-                cell1.innerHTML = "<img id='products" + i.toString() + "' src='" + imageUrl[i] + "' class='image'>";
+                cell1.style.borderStyle = "solid";
+                cell1.style.fontSize = "30px";
+                cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
+                cell1.innerHTML = nameProduct[i] + " " + "<img id='products" + i.toString() + "' src='" + imageUrl[i] + "'class='image'>" + "מחיר " + price[i] + " ₪";
+                cell1.onclick = function () {
+                   // alert(this.innerHTML);
+                   //window.open();
+                }
             }
 
         }
