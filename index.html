@@ -4,13 +4,19 @@
 
 <head>
     <style>
+        #grad1 {
+            height: 150px;
+            background-color: #cccccc;
+           
+        }
+
         .background {
             background: no-repeat center center fixed;
             background-size: cover;
             object-fit: cover;
             background-repeat: no-repeat;
-            background-size: 100% 100%;
-            background-image: url('https://i.im.ge/2022/06/18/rGzlOq.jpg');
+            background-size: 100% 90%;
+            background-image: url('https://i.im.ge/2022/06/18/rGzOo1.jpg');
         }
 
         .image {
@@ -54,9 +60,14 @@
 
 </head>
 
-<body id="body" onload="displayProducts()" class="background">
-    <table style="padding-left:12%;padding-top: 8%;" id="displayProducts">
-    </table>
+<body id="body" onload="displayProducts()">
+    <div id="grad1">
+        <img src="https://i.im.ge/2022/06/18/rGzVi1.png" style="position:absolute;left: 38%;height: 170px;width: 250px;">
+    </div>
+    <div>
+        <table style="padding-left:12%;padding-top: 8%;" id="displayProducts">
+        </table>
+    </div>
     <input style="position:absolute;top: 0px ;" onclick="changeBackground('https://i.im.ge/2022/06/18/rGaeQp.png')"
         id="backgroundEdit" type="button" value="מנורות">
 
