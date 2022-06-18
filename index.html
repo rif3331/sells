@@ -4,6 +4,15 @@
 
 <head>
     <style>
+        .background {
+            background: no-repeat center center fixed;
+            background-size: cover;
+            object-fit: cover;
+            background-repeat: no-repeat;
+            background-size: 120% 100%;
+            background-image: url('https://i.im.ge/2022/06/18/rGfRv4.jpg');
+        }
+
         .image {
             width: 300px;
             height: 200px;
@@ -18,11 +27,14 @@
     <script type="text/javascript">
         function changeBackground(url) {
             for (var i = 0; i < imageUrl.length; i++) {
-           document.getElementById("products"+i.toString()).style.backgroundImage = "url("+url+")";
+                document.getElementById("products" + i.toString()).style.backgroundImage = "url(" + url + ")";
             }
         }
 
         const imageUrl = new Array(
+            "https://i.im.ge/2022/06/18/rGo2Oh.png",
+            "https://i.im.ge/2022/06/18/rGoFyX.png",
+            "https://i.im.ge/2022/06/18/rGoTTz.png",
             "https://i.im.ge/2022/06/18/rGo2Oh.png",
             "https://i.im.ge/2022/06/18/rGoFyX.png",
             "https://i.im.ge/2022/06/18/rGoTTz.png"
@@ -30,9 +42,9 @@
         function displayProducts() {
             var tableProducts = document.getElementById("displayProducts");
             for (var i = 0; i < imageUrl.length; i++) {
-                var row = tableProducts.insertRow(-1);
+                if (i % 3 == 0)
+                    var row = tableProducts.insertRow(-1);
                 var cell1 = row.insertCell(0);
-                // cell1.style.backgroundColor = "black";
                 cell1.style.opacity = "0.8";
                 cell1.innerHTML = "<img id='products" + i.toString() + "' src='" + imageUrl[i] + "' class='image'>";
             }
@@ -42,11 +54,11 @@
 
 </head>
 
-<body onload="displayProducts()">
-    
-    <table id="displayProducts">
+<body id="body" onload="displayProducts()" class="background">
+    <table style="padding-left:12%;padding-top: 8%;" id="displayProducts">
     </table>
-    <input style="position:absolute;top: 0px ;" onclick="changeBackground('https://i.im.ge/2022/06/18/rGaeQp.png')" id="backgroundEdit" type="button" value="מנורות">
+    <input style="position:absolute;top: 0px ;" onclick="changeBackground('https://i.im.ge/2022/06/18/rGaeQp.png')"
+        id="backgroundEdit" type="button" value="מנורות">
 
 
 </body>
