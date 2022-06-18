@@ -17,8 +17,8 @@
 
         /* Style the header */
         #header {
-            position: fixed;
             width: 100%;
+            position: fixed;
             height: 225px;
             transition: 0.2s;
             background-color: #cccccc;
@@ -66,11 +66,16 @@
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
                 document.getElementById("logo").style.height = "200px";
                 document.getElementById("header").style.height = "100px";
+                document.getElementById("header").style.paddingLeft = "150px";
             }
 
             else {
                 document.getElementById("logo").style.height = "400px";
                 document.getElementById("header").style.height = "225px";
+                document.getElementById("header").style.left = "0%";
+                document.getElementById("header").style.paddingLeft = "0px";
+
+
 
             }
         }
@@ -125,20 +130,20 @@
 
 <body id="body" onload="displayProducts()">
 
-    <div id="header">
+    
+    <div style="z-index:2;" id="header">
         <img id="logo" src="https://i.im.ge/2022/06/18/rGzVi1.png">
     </div>
 
-    <div class="topnav">
-        <a href="#">Link</a>
-        <a href="#">Link</a>
-        <a href="#">Link</a>
+    <div style="position:absolute;margin-top:400px;">
 
+        <table id="displayProducts">
+        </table>
+      
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br>  <br><br><br><br><br><br><br><br><br><br><br>
+    
 
-    <table id="displayProducts">
-    </table>
+   
 
 
 
