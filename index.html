@@ -29,7 +29,7 @@
 
         }
 
-
+      
 
         .image {
             width: 200px;
@@ -104,10 +104,6 @@
             "https://i.im.ge/2022/06/18/rGoTTz.png"
         );
         function displayProducts() {
-            window.onzoom = function (e) {
-                // zoom event
-                alert("dfsdf");
-            }
             var tableProducts = document.getElementById("displayProducts");
 
 
@@ -127,7 +123,7 @@
 <body id="body" onload="displayProducts()">
 
     <div style="z-index:2;" id="header">
-        <img id="logo" src="https://i.im.ge/2022/06/18/rGzVi1.png">
+        <img style="position:sticky;" id="logo" src="https://i.im.ge/2022/06/18/rGzVi1.png">
     </div>
 
     <div id="tableDiv" style="position:absolute;margin-top:400px;">
