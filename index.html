@@ -16,9 +16,14 @@
             margin: 0;
         }
 
-        table,tr {
+        table {
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-collapse: collapse;
 
+        }
+
+        tr {
+            border-bottom: 1pt solid black;
         }
 
 
@@ -164,19 +169,19 @@
 
                 if (i % 2 == 0)
                     var row = tableProducts.insertRow(-1);
-                    var cell0 = row.insertCell(-1);
-                    cell0.style.borderLeft="solid";cell0.style.borderTop="solid";cell0.style.borderBottom="solid";
-                    cell0.innerHTML="<img id='back" + i.toString() + "' src='https://i.im.ge/2022/06/20/uQnb0z.png' style='width: 37px;height: 37px;'>";
+                row.style.borderBottom = "solid";
+                var cell0 = row.insertCell(-1);
+                cell0.style.borderLeft = "solid";
+                cell0.innerHTML = "<img id='back" + i.toString() + "' src='https://i.im.ge/2022/06/20/uQnb0z.png' style='width: 37px;height: 37px;'>";
                 var cell1 = row.insertCell(-1);
                 cell1.style.fontSize = "30px";
                 cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
                 cell1.innerHTML = nameProduct[i];
-                cell1.style.borderTop="solid";cell1.style.borderBottom="solid";
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageUrl[i] + "'class='image'>";
                 cell1.innerHTML += "מחיר: " + price[i] + "₪";
                 var cell0 = row.insertCell(-1);
-                cell0.style.borderRight="solid";cell0.style.borderTop="solid";cell0.style.borderBottom="solid";
-                cell0.innerHTML="<img id='foward" + i.toString() + "' src='https://i.im.ge/2022/06/20/uQnwgT.png' style='width: 40px;height: 40px;'>"
+                cell0.style.borderRight = "solid";
+                cell0.innerHTML = "<img id='foward" + i.toString() + "' src='https://i.im.ge/2022/06/20/uQnwgT.png' style='width: 40px;height: 40px;'>"
                 cell1.onclick = function () {
                     // alert(this.innerHTML);
                     //window.open();
@@ -196,14 +201,14 @@
 
     <div id="tableDiv" style="position:absolute;margin-top:400px;">
 
-        <table id="displayProducts">
+        <table style="margin-left:5px ;" id="displayProducts">
             <tr></tr>
             <tr>
-            <td id="firstRow" colspan="6"
-                style="direction:rtl;font-size:16px;width:320px;background-color:black;color:white;;text-align:center">
-                ברוכים הבאים ל"סייל", אתר מכירות יד שנייה,<br> אם אתם רוצים לעלות פריט תשלחו תמונה שלו (אפשר יותר
-                מאחת)<br> ותיאור שלו (מידה, מצב
-                שימוש, צבע וכדומה) למספר 050-2180883</td>
+                <td id="firstRow" colspan="6"
+                    style="direction:rtl;font-size:16px;width:320px;background-color:black;color:white;;text-align:center">
+                    ברוכים הבאים ל"סייל", אתר מכירות יד שנייה,<br> אם אתם רוצים לעלות פריט תשלחו תמונה שלו (אפשר יותר
+                    מאחת)<br> ותיאור שלו (מידה, מצב
+                    שימוש, צבע וכדומה) למספר 050-2180883</td>
             </tr>
         </table>
 
@@ -214,7 +219,7 @@
 
 
 
-    
+
 </body>
 
 </html>
