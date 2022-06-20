@@ -84,14 +84,14 @@
             }
         }
         const nameProduct = new Array(
-            "שמלה צהובה",
-            "נעלי ג'ורדן",
-            "מגפיים",
-            "מכנס קצר",
-            "כובע אדום",
-            "תיק צד",
-            "שעון",
-            "כובע",
+         /*/1/*/   "שמלה שחורה",
+        /*/2/*/  "שמלה תכלת",
+            /*/3/*/"טופ ביקיני",
+          /*/4/*/  "שמלה אדומה",
+          /*/5/*/  "כובע אדום",
+          /*/6/*/  "תיק צד",
+          /*/7/*/  "שעון",
+          /*/8/*/  "כובע",
             "שמלה לבנה",
             "שמלה שחורה",
             "מגפיים",
@@ -110,9 +110,9 @@
             "כובע לבן"
         );
         const price = new Array(
-            "422",
-            "355.5",
-            "220",
+            "269",
+            "269",
+            "129",
             "400",
             "300",
             "200",
@@ -136,12 +136,12 @@
             "442"
         );
         const imageUrl = new Array(
-            "https://i.im.ge/2022/06/18/rGo2Oh.png",
-            "https://i.im.ge/2022/06/18/rGoFyX.png",
+            "https://i.im.ge/2022/06/21/uTXENc.png☼https://i.im.ge/2022/06/21/uTXxfL.png☼https://i.im.ge/2022/06/21/uTXYrG.png☼https://i.im.ge/2022/06/21/uTXb5x.png",
+            "https://i.im.ge/2022/06/21/uTXRIy.png☼https://i.im.ge/2022/06/21/uTX8MJ.png☼https://i.im.ge/2022/06/21/uTXZJz.png",
+            "https://i.im.ge/2022/06/21/uTXkfK.png☼https://i.im.ge/2022/06/21/uTXv88.png☼https://i.im.ge/2022/06/21/uTXnQh.png",
             "https://i.im.ge/2022/06/18/rGoTTz.png",
-            "https://i.im.ge/2022/06/18/rGoFyX.png",
-            "https://i.im.ge/2022/06/18/rGoTTz.png",
             "https://i.im.ge/2022/06/18/rGo2Oh.png",
+            "https://i.im.ge/2022/06/18/rGoFyX.png☼https://i.im.ge/2022/06/18/rGoTTz.png",
             "https://i.im.ge/2022/06/18/rGoFyX.png",
             "https://i.im.ge/2022/06/18/rGoTTz.png",
             "https://i.im.ge/2022/06/18/rGo2Oh.png",
@@ -165,27 +165,100 @@
             var tableProducts = document.getElementById("displayProducts");
 
             for (var i = 0; i < imageUrl.length; i++) {
-
-
+                var imageOne = imageUrl[i].split('☼');
                 if (i % 2 == 0)
                     var row = tableProducts.insertRow(-1);
                 row.style.borderBottom = "solid";
+
                 var cell0 = row.insertCell(-1);
                 cell0.style.borderLeft = "solid";
-                cell0.innerHTML = "<img id='back" + i.toString() + "' src='https://i.im.ge/2022/06/20/uQnb0z.png' style='width: 37px;height: 37px;'>";
+                cell0.innerHTML = "<img id='back" + i.toString() + "'src='https://i.im.ge/2022/06/20/uQnb0z.png' style='cursor:pointer;width: 37px;height: 37px;'>";
+
+                cell0.innerHTML += "<a id=aback" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
+                if (imageOne.length == "1") {
+                    cell0.style.visibility = "hidden";
+                }
+                cell0.onclick = function () {
+                    var content = this.innerHTML;
+                    var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
+                    var aImportentData = importentData.split('^');
+                    var numberImage = aImportentData[0];
+                    var linkImage = aImportentData[1];
+                    var imageChoose = linkImage.split('☼');
+                    // alert(parseInt(numberImage)+1);
+                    //לשנות את ה8 בFORWARD
+                    var numberCoulman = content.slice(content.indexOf("id=") + 8, content.indexOf(" src=") - 1);
+                    var centerLinkImage = document.getElementById("products" + numberCoulman).src;
+
+                    var indexImage = imageChoose[parseInt(numberImage) - 1];
+
+                    if (indexImage == undefined) {
+                        indexImage = imageChoose[imageChoose.length - 1];
+                        document.getElementById("aback" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
+                        document.getElementById("afoward" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
+
+                    }
+                    else {
+                        document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) - 1).toString() + "^" + linkImage;
+                        document.getElementById("afoward" + numberCoulman).innerHTML = (parseInt(numberImage) - 1).toString() + "^" + linkImage;
+
+                    }
+                    document.getElementById("products" + numberCoulman).src = indexImage;
+                    // alert(document.getElementById("aback" + numberCoulman).innerHTML);
+
+
+                }
+
+
+
                 var cell1 = row.insertCell(-1);
                 cell1.style.fontSize = "30px";
                 cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
                 cell1.innerHTML = nameProduct[i];
-                cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageUrl[i] + "'class='image'>";
+                cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
                 cell1.innerHTML += "מחיר : " + price[i] + "₪";
-                var cell0 = row.insertCell(-1);
-                cell0.style.borderRight = "solid";
-                cell0.innerHTML = "<img id='foward" + i.toString() + "' src='https://i.im.ge/2022/06/20/uQnwgT.png' style='width: 40px;height: 40px;'>"
                 cell1.onclick = function () {
                     // alert(this.innerHTML);
                     //window.open();
                 }
+
+                var cell0 = row.insertCell(-1);
+                cell0.style.borderRight = "solid";
+                cell0.innerHTML = "<img id='foward" + i.toString() + "' src='https://i.im.ge/2022/06/20/uQnwgT.png' style='cursor:pointer;width: 40px;height: 40px;'>";
+                cell0.innerHTML += "<a id=afoward" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
+
+                if (imageOne.length == "1") {
+                    cell0.style.visibility = "hidden";
+                }
+                cell0.onclick = function () {
+                    var content = this.innerHTML;
+                    var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
+                    var aImportentData = importentData.split('^');
+                    var numberImage = aImportentData[0];
+                    var linkImage = aImportentData[1];
+                    var imageChoose = linkImage.split('☼');
+                    // alert(parseInt(numberImage)+1);
+                    var numberCoulman = content.slice(content.indexOf("id=") + 10, content.indexOf(" src=") - 1);
+                    var centerLinkImage = document.getElementById("products" + numberCoulman).src;
+
+                    var indexImage = imageChoose[parseInt(numberImage) + 1];
+
+                    if (indexImage == undefined) {
+                        indexImage = imageChoose[0];
+                        document.getElementById("afoward" + numberCoulman).innerHTML = "0^" + linkImage;
+                        document.getElementById("aback" + numberCoulman).innerHTML = "0^" + linkImage;
+
+                    }
+                    else {
+                        document.getElementById("afoward" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
+                        document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
+
+                    }
+                    document.getElementById("products" + numberCoulman).src = indexImage;
+                    // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
+
+                }
+
             }
 
         }
@@ -213,7 +286,6 @@
         </table>
 
     </div>
-
 
 
 
