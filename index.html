@@ -4,6 +4,7 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
     <style>
@@ -15,9 +16,13 @@
             margin: 0;
         }
 
-        table {
+        table,
+        tr {
+            border: 1px solid black;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
         }
+
 
         /* Style the header */
         #header {
@@ -155,21 +160,27 @@
         );
         function displayProducts() {
             var tableProducts = document.getElementById("displayProducts");
-
+            tableProducts.style.border = "solid";
 
             for (var i = 0; i < imageUrl.length; i++) {
 
 
-                if (i % 3 == 0)
+                if (i % 2 == 0)
                     var row = tableProducts.insertRow(-1);
-                var cell1 = row.insertCell(0);
-                cell1.style.borderStyle = "solid";
+                    var cell0 = row.insertCell(-1);
+                    cell0.innerHTML="<img id='back" + i.toString() + "' src='https://i.im.ge/2022/06/20/uQJGwy.png' style='width: 40px;height: 40px;'>"
+                var cell1 = row.insertCell(-1);
                 cell1.style.fontSize = "30px";
                 cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
-                cell1.innerHTML = nameProduct[i] + " " + "<img id='products" + i.toString() + "' src='" + imageUrl[i] + "'class='image'>" + "מחיר: " + price[i] + "₪";
+                cell1.innerHTML = nameProduct[i];
+
+                cell1.innerHTML += "<div style='border:solid ;''><img id='products" + i.toString() + "' src='" + imageUrl[i] + "'class='image'></div>";
+                cell1.innerHTML += "מחיר: " + price[i] + "₪";
+                var cell0 = row.insertCell(-1);
+                    cell0.innerHTML="<img id='back" + i.toString() + "' src='https://i.im.ge/2022/06/20/uQJGwy.png' style='width: 40px;height: 40px;'>"
                 cell1.onclick = function () {
-                   // alert(this.innerHTML);
-                   //window.open();
+                    // alert(this.innerHTML);
+                    //window.open();
                 }
             }
 
@@ -190,7 +201,8 @@
             <tr></tr>
             <td id="firstRow" colspan="3"
                 style="direction:rtl;font-size:16px;width:310px;background-color:black;color:white;;text-align:center">
-                ברוכים הבאים ל"סייל", אתר מכירות יד שנייה,<br>  אם אתם רוצים לעלות פריט תשלחו תמונה שלו (אפשר יותר מאחת)<br> ותיאור שלו (מידה, מצב
+                ברוכים הבאים ל"סייל", אתר מכירות יד שנייה,<br> אם אתם רוצים לעלות פריט תשלחו תמונה שלו (אפשר יותר
+                מאחת)<br> ותיאור שלו (מידה, מצב
                 שימוש, צבע וכדומה) למספר 050-2180883</td>
             </tr>
         </table>
@@ -202,6 +214,25 @@
 
 
 
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+        }
+    </script>
 </body>
 
 </html>
