@@ -86,7 +86,7 @@
          /*/1/*/   "שמלה שחורה",
         /*/2/*/  "שמלה תכלת",
             /*/3/*/"טופ ביקיני",
-          /*/4/*/  "שמלה אדומה",
+          /*/4/*/  "תרסיס נגד יתושים",
           /*/5/*/  "כובע אדום",
           /*/6/*/  "תיק צד",
           /*/7/*/  "שעון",
@@ -195,14 +195,40 @@
                         indexImage = imageChoose[imageChoose.length - 1];
                         document.getElementById("aback" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
                         document.getElementById("afoward" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
-
+                        for (var i = 0; i < imageChoose.length; i++) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.top = "0px";
+                      
                     }
                     else {
                         document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) - 1).toString() + "^" + linkImage;
                         document.getElementById("afoward" + numberCoulman).innerHTML = (parseInt(numberImage) - 1).toString() + "^" + linkImage;
+                        for (var i = imageChoose.length; i > 0; i--) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.top = "0px";
+                        
 
                     }
                     document.getElementById("products" + numberCoulman).src = indexImage;
+
                     // alert(document.getElementById("aback" + numberCoulman).innerHTML);
 
 
@@ -215,6 +241,12 @@
                 cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
                 cell1.innerHTML = nameProduct[i];
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
+                cell1.style.textAlign = "center";
+                // alert(imageOne.length);
+                for (var n = imageOne.length - 1; n > 0; n--) {
+                    cell1.innerHTML += "<img id='" + n.toString() + "point" + i.toString() + "' style='width:36px;height:39px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
+                }
+                cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
                 cell1.innerHTML += "מחיר : " + price[i] + "₪";
                 cell1.onclick = function () {
                     // alert(this.innerHTML);
@@ -246,11 +278,35 @@
                         indexImage = imageChoose[0];
                         document.getElementById("afoward" + numberCoulman).innerHTML = "0^" + linkImage;
                         document.getElementById("aback" + numberCoulman).innerHTML = "0^" + linkImage;
+                        for (var i = imageChoose.length-1; i >= 0; i--) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById("0" + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById("0" + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById("0" + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById("0" + "point" + numberCoulman).style.top = "0px";
 
                     }
                     else {
                         document.getElementById("afoward" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
                         document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
+                        for (var i = imageChoose.length-1; i >= 0; i--) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.top = "0px";
 
                     }
                     document.getElementById("products" + numberCoulman).src = indexImage;
@@ -277,7 +333,7 @@
             <tr></tr>
             <tr>
                 <td id="firstRow" colspan="6"
-                    style="direction:rtl;font-size:16px;width:320px;background-color:black;color:white;;text-align:center">
+                    style="direction:rtl;font-size:14px;width:320px;background-color:black;color:white;;text-align:center">
                     ברוכים הבאים ל"סייל", אתר מכירות יד שנייה,<br> אם אתם רוצים לעלות פריט תשלחו תמונה שלו (אפשר יותר
                     מאחת)<br> ותיאור שלו (מידה, מצב
                     שימוש, צבע וכדומה) למספר 050-2180883</td>
