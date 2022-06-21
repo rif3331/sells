@@ -22,7 +22,7 @@
         }
 
         tr {
-            border-bottom: 1pt solid black;
+            border: 1pt solid black;
         }
 
 
@@ -68,7 +68,7 @@
                 document.getElementById("header").style.left = "0%";
                 document.getElementById("header").style.paddingLeft = "0px";
                 document.getElementById("tableDiv").style.marginTop = "400px";
-                document.getElementById("firstRow").innerHTML = 'ברוכים הבאים ל"סייל", אתר מכירות יד שנייה,<br> אם אתם רוצים לעלות פריט תשלחו תמונה שלו (אפשר יותר מאחת)<br> ותיאור שלו (מידה, מצב שימוש, צבע וכדומה) למספר 050-2180883';
+                document.getElementById("firstRow").innerHTML = '  ברוכים הבאים ל"סייל" <br>אתר מכירות יד שנייה<br> לצפייה בפרטים לחיצה קצרה,<br> להגדלת התמונה לחיצה ארוכה';
 
 
 
@@ -167,7 +167,7 @@
                 var imageOne = imageUrl[i].split('☼');
                 if (i % 2 == 0)
                     var row = tableProducts.insertRow(-1);
-                row.style.borderBottom = "solid";
+                row.style.border = "solid";
 
                 var cell0 = row.insertCell(-1);
                 cell0.style.borderLeft = "solid";
@@ -333,10 +333,8 @@
             <tr></tr>
             <tr>
                 <td id="firstRow" colspan="6"
-                    style="direction:rtl;font-size:14px;width:320px;background-color:black;color:white;;text-align:center">
-                    ברוכים הבאים ל"סייל", אתר מכירות יד שנייה,<br> אם אתם רוצים לעלות פריט תשלחו תמונה שלו (אפשר יותר
-                    מאחת)<br> ותיאור שלו (מידה, מצב
-                    שימוש, צבע וכדומה) למספר 050-2180883</td>
+                    style="direction:rtl;font-size:40px;width:320px;background-color:black;color:white;;text-align:center">
+                ברוכים הבאים ל"סייל" <br>אתר מכירות יד שנייה<br> לצפייה בפרטים לחיצה קצרה,<br> להגדלת התמונה לחיצה ארוכה
             </tr>
         </table>
 
