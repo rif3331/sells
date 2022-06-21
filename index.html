@@ -55,7 +55,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
                 document.getElementById("logo").style.height = "200px";
                 document.getElementById("header").style.height = "100px";
                 document.getElementById("header").style.paddingLeft = "150px";
@@ -70,7 +70,6 @@
                 document.getElementById("header").style.left = "0%";
                 document.getElementById("header").style.paddingLeft = "0px";
                 document.getElementById("tableDiv").style.marginTop = "400px";
-                document.getElementById("firstRow").innerHTML = '  ברוכים הבאים ל"סייל" <br>אתר מכירות יד שנייה<br> לצפייה בפרטים לחיצה קצרה,<br> להגדלת התמונה לחיצה ארוכה';
 
 
 
@@ -332,16 +331,16 @@
     <div id="tableDiv" style="position:absolute;margin-top:400px;">
 
         <table style="margin-left:4px ;" id="displayProducts">
-            <tr></tr>
+          <tr></tr>  
             <tr>
                 <td id="firstRow" colspan="6"
                     style="direction:rtl;font-size:40px;width:320px;background-color:black;color:white;;text-align:center">
-                ברוכים הבאים ל"סייל" <br>אתר מכירות יד שנייה<br> לצפייה בפרטים לחיצה קצרה,<br> להגדלת התמונה לחיצה ארוכה
             </tr>
+          
         </table>
 
     </div>
-
+    <marquee id="textMove" direction="left" behavior="alternate" style="z-index:3;border:BLACK 2px SOLID;width:610px;left:0px;top:0px;position:absolute;font-size: xx-large;"> ברוכים הבאים ל"סייל" אתר מכירות יד שנייה </marquee>
 
 
 
