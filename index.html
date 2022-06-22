@@ -219,7 +219,7 @@
             initialY = e.touches[0].clientY;
         };
 
-        function moveTouch(e) {
+        function moveTouch(e,string) {
 
             if (initialX === null) {
                 return;
@@ -239,9 +239,11 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
+                    alert(string);
                     alert("swiped left");
                 } else {
                     // swiped right
+                    alert(string);
                     alert("swiped right");
                 }
             }
@@ -429,8 +431,8 @@
 
                 }
                 document.getElementById("products" + i.toString()).addEventListener("touchstart", startTouch, false);
-                document.getElementById("products" + i.toString()).addEventListener("touchmove", moveTouch, false);
-                alert(cell1.innerHTML);
+                document.getElementById("products" + i.toString()).addEventListener("touchmove", moveTouch(e,cell1.innerHTML), false);
+                alert("sdsd");
             }
 
         }
