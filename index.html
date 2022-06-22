@@ -88,6 +88,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
+            document.getElementById("logo").className=null;
             if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
                 document.getElementById("logo").style.height = "200px";
                 document.getElementById("header").style.height = "100px";
@@ -103,6 +104,11 @@
                 document.getElementById("header").style.left = "0%";
                 document.getElementById("header").style.paddingLeft = "0px";
                 document.getElementById("tableDiv").style.marginTop = "400px";
+                setTimeout(function () {
+                    document.getElementById("logo").className = "w3-container w3-center w3-animate-zoom";
+                }, 100);
+
+
 
 
 
@@ -480,7 +486,7 @@
 
                 var cell1 = row.insertCell(-1);
                 cell1.style.fontSize = "16px";
-                cell1.style.cursor="pointer";
+                cell1.style.cursor = "pointer";
                 cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
                 cell1.innerHTML = "<u>" + nameProduct[i] + " - " + sizeProduct[i] + "<u/>";
                 cell1.innerHTML += "<a style='fontSize:5px' id='text" + i.toString() + "'><a/>";
