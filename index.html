@@ -220,7 +220,7 @@
         };
 
         function moveTouch(e) {
-            
+
             if (initialX === null) {
                 return;
             }
@@ -239,11 +239,11 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
-                   // alert("swiped left");
-                   alert(string);
+                    // alert("swiped left");
+                    alert(string);
                 } else {
                     // swiped right
-                   // alert("swiped right");
+                    // alert("swiped right");
                 }
             }
 
@@ -429,11 +429,12 @@
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
 
                 }
-
+                document.getElementById("products" + i.toString()).addEventListener("touchstart", startTouch, false);
+                document.getElementById("products" + i.toString()).addEventListener("touchmove", moveTouch, false);
+                alert(cell1.innerHTML);
             }
             for (var i = 0; i < imageUrl.length; i++) {
-            document.getElementById("products"+i.toString()).addEventListener("touchstart", startTouch, false);
-            document.getElementById("products"+i.toString()).addEventListener("touchmove", moveTouch, false);
+
             }
         }
     </script>
