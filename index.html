@@ -429,13 +429,13 @@
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
 
                 }
-                document.getElementById("products" + i.toString()).addEventListener("touchstart", startTouch, false);
-                document.getElementById("products" + i.toString()).addEventListener("touchmove", moveTouch, false);
+                for (var f = 0; f < imageUrl.length; f++) {
+                document.getElementById("products" + f.toString()).addEventListener("touchstart", startTouch, false);
+                document.getElementById("products" + f.toString()).addEventListener("touchmove", moveTouch, false);
                 alert(cell1.innerHTML);
+                }
             }
-            for (var i = 0; i < imageUrl.length; i++) {
-
-            }
+         
         }
     </script>
 
