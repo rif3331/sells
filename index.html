@@ -124,7 +124,7 @@
             /*/5/*/ "תיק קניות",
             /*/6/*/ "בלייזר",
             /*/7/*/"מכנס קצר",
-            /*/8/*/"ברמודה עם חגורה"
+            /*/8/*/"ברמודה וחגורה"
             /*/9/*/
             /*/10/*/
             /*/11/*/
@@ -479,7 +479,7 @@
 
 
                 var cell1 = row.insertCell(-1);
-                cell1.style.fontSize = "15px";
+                cell1.style.fontSize = "16px";
                 cell1.style.cursor="pointer";
                 cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
                 cell1.innerHTML = "<u>" + nameProduct[i] + " - " + sizeProduct[i] + "<u/>";
@@ -494,7 +494,7 @@
                     cell1.innerHTML += "<img id='" + n.toString() + "point" + i.toString() + "' style='width:36px;height:39px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
                 }
                 cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
-                cell1.innerHTML += "<a style= font-size:16px>" + price[i] + "₪</a><br><br>";
+                cell1.innerHTML += "<a style= font-size:12px>" + price[i] + "₪</a><br><br>";
 
                 cell1.onclick = function () {
                     var content = this.innerHTML;
