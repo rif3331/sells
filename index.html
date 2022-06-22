@@ -240,6 +240,7 @@
                     var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
                     var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
                     var linkImage = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
+                    alert(linkImage);
                     var imageChoose = linkImage.split('☼');
 
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
