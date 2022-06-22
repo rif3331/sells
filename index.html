@@ -215,12 +215,9 @@
 
         );
         function displayProducts() {
-            document.addEventListener('swiped-right', function (e) {
-                alert("dsfsd");
-                console.log(e.target); // the element that was swiped
-            });
+          
             var tableProducts = document.getElementById("displayProducts");
-
+          
             for (var i = 0; i < imageUrl.length; i++) {
                 var imageOne = imageUrl[i].split('☼');
                 if (i % 2 == 0)
@@ -432,7 +429,11 @@
         <span style="--i:14">י</span>
         <span style="--i:15">ה</span>
     </div>
-
+<script>
+      document.addEventListener('swiped-right', function (e) {
+                alert(e.target); // the element that was swiped
+            });
+</script>
 
 
 
