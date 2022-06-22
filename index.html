@@ -323,9 +323,10 @@
                     var centerLinkImage = document.getElementById("products" + numberCoulman).src;
 
                     var indexImage = imageChoose[parseInt(numberImage) - 1];
-                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=numberImage;
+                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=parseInt(numberImage) - 1;
                     if (indexImage == undefined) {
                         indexImage = imageChoose[imageChoose.length - 1];
+                        document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=imageChoose.length - 1;
                         document.getElementById("aback" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
                         document.getElementById("afoward" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
                         for (var i = 0; i < imageChoose.length; i++) {
@@ -425,10 +426,12 @@
                     var centerLinkImage = document.getElementById("products" + numberCoulman).src;
 
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
-                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=numberImage;
+                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=parseInt(numberImage) + 1;
+
 
                     if (indexImage == undefined) {
                         indexImage = imageChoose[0];
+                        document.getElementById("numberimage" + numberCoulman.toString()).innerHTML="0";
                         document.getElementById("afoward" + numberCoulman).innerHTML = "0^" + linkImage;
                         document.getElementById("aback" + numberCoulman).innerHTML = "0^" + linkImage;
                         for (var i = imageChoose.length - 1; i >= 0; i--) {
