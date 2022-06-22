@@ -83,10 +83,9 @@
         }
     </style>
     <script>
-        function clickImage()
-        {
+        function clickImage() {
             alert("fsdf");
-            document.getElementById("chek").style.opacity="0.5";
+            document.getElementById("chek").style.opacity = "0.5";
         }
         // When the user scrolls down 50px from the top of the document, resize the header's font size
         window.onscroll = function () { scrollFunction() };
@@ -277,8 +276,8 @@
                 var cell1 = row.insertCell(-1);
                 cell1.style.fontSize = "30px";
                 cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
-                cell1.innerHTML ="<a>"+ nameProduct[i]+"<a/>";
-                cell1.innerHTML+="<a style='fontSize:5px' id='text" + i.toString() + "'><a/>";
+                cell1.innerHTML = "<a>" + nameProduct[i] + "<a/>";
+                cell1.innerHTML += "<a style='fontSize:5px' id='text" + i.toString() + "'><a/>";
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
                 cell1.style.textAlign = "center";
                 // alert(imageOne.length);
@@ -291,17 +290,15 @@
                     var content = this.innerHTML;
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
 
-                    if(document.getElementById("text"+number.toString()).innerHTML==""||document.getElementById("text"+number.toString()).innerHTML==null)
-                    {
-                    document.getElementById("text"+ number.toString()).style.fontSize="14px";
-                    document.getElementById("products"+number.toString()).style.opacity="0.2";
-                    document.getElementById("text"+number.toString()).innerHTML+="<div style='position:absolute;text-align:center;width:200px' >אביב:050-34775526, רק הודעותתתתתתת</div>";
-                    document.getElementById("text"+number.toString()).innerHTML+="<div style='position:absolute;text-align:center;width:200px;margin-top:80px' >שמלה במצב מצוין נקנתה לפני שנתיים, נמכרת בגלל המידה</div>";
+                    if (document.getElementById("text" + number.toString()).innerHTML == "" || document.getElementById("text" + number.toString()).innerHTML == null) {
+                        document.getElementById("text" + number.toString()).style.fontSize = "14px";
+                        document.getElementById("products" + number.toString()).style.opacity = "0.2";
+                        document.getElementById("text" + number.toString()).innerHTML += "<div style='position:absolute;text-align:center;width:200px' >אביב:050-34775526, רק הודעות</div>";
+                        document.getElementById("text" + number.toString()).innerHTML += "<div style='position:absolute;text-align:center;width:200px;margin-top:80px' >שמלה במצב מצוין נקנתה לפני שנתיים, נמכרת בגלל המידה</div>";
                     }
-                    else
-                    {
-                        document.getElementById("products"+number.toString()).style.opacity="1";
-                        document.getElementById("text"+number.toString()).innerHTML="";
+                    else {
+                        document.getElementById("products" + number.toString()).style.opacity = "1";
+                        document.getElementById("text" + number.toString()).innerHTML = "";
 
                     }
                     //window.open();
@@ -415,9 +412,7 @@
         <span style="--i:15">ה</span>
     </div>
 
-    <div style="position:absolute;right:75px;top:-2px;z-index:5;direction: rtl;width:200px ;">
-        <img onclick="clickImage()" id="chek" src="https://i.im.ge/2022/06/18/rGzVi1.png">
-    </div>
+
 
 
 
