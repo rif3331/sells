@@ -335,7 +335,7 @@
                 var cell1 = row.insertCell(-1);
                 cell1.style.fontSize = "24px";
                 cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
-                cell1.innerHTML = "<a>" + nameProduct[i] + " - " + sizeProduct[i] + "<a/>";
+                cell1.innerHTML = "<u>" + nameProduct[i] + " - " + sizeProduct[i] + "<u/>";
                 cell1.innerHTML += "<a style='fontSize:5px' id='text" + i.toString() + "'><a/>";
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
                 cell1.style.textAlign = "center";
@@ -346,8 +346,9 @@
                 for (var n = imageOne.length - 1; n > 0; n--) {
                     cell1.innerHTML += "<img id='" + n.toString() + "point" + i.toString() + "' style='width:36px;height:39px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
                 }
+                cell1.style.fontSize = "18px";
                 cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
-                cell1.innerHTML += price[i] + "₪<br><br>";
+                cell1.innerHTML +="<a style= font-size:16px>"+ price[i] + "₪</a><br><br>";
                 cell1.onclick = function () {
                     var content = this.innerHTML;
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
