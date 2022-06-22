@@ -241,6 +241,7 @@
                     var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
                     var numberImage=document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
                     var imageChoose=document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
+                    alert(content);
                     alert(numberImage);   alert(imageChoose);
 
                     /*/
@@ -465,10 +466,7 @@
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
 
                 }
-                var content = cell0.innerHTML;
-                var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
-                var aImportentData = importentData.split('^');
-                var numberImage = aImportentData[0];
+
                 cell1.innerHTML += "<a id=imgArray" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
                 cell1.innerHTML += "<a id=numberimage" + i.toString() + " style='display:none;'>0</a>";
                 cell1.addEventListener("touchstart", startTouch, false);
