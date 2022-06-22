@@ -239,17 +239,43 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
-                   alert("swiped left");
+                    alert("swiped left");
+                    alert(this.innerHTML);
+                    /*/   var content = this.innerHTML;
+                                        var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
+                                        var aImportentData = importentData.split('^');
+                                        var numberImage = aImportentData[0];
+                                        var linkImage = aImportentData[1];
+                                        var imageChoose = linkImage.split('☼');
+                                        // alert(parseInt(numberImage)+1);
+                                        //לשנות את ה8 בFORWARD
+                                        var numberCoulman = content.slice(content.indexOf("id=") + 8, content.indexOf(" src=") - 1);
+                                        var centerLinkImage = document.getElementById("products" + numberCoulman).src;
+                    
+                                        var indexImage = imageChoose[parseInt(numberImage) - 1];
+                     /*/
+
+
+
+
+
+
+
+
+
+
+
+
                 } else {
                     // swiped right
-                   alert("swiped right");
+                    alert("swiped right");
                 }
             } else {
                 // sliding vertically
                 if (diffY > 0) {
                     // swiped up
                     Window.scroll();
-                   // alert("swiped up");
+                    // alert("swiped up");
                 } else {
                     // swiped down
                     Window.scroll();
@@ -360,6 +386,7 @@
                 cell1.style.fontSize = "18px";
                 cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
                 cell1.innerHTML += "<a style= font-size:16px>" + price[i] + "₪</a><br><br>";
+                cell1.innerHTML += "<a id=imgArray" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
                 cell1.onclick = function () {
                     var content = this.innerHTML;
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
@@ -441,6 +468,7 @@
                 cell1.addEventListener("touchstart", startTouch, false);
                 cell1.addEventListener("touchmove", moveTouch, false);
 
+                //  alert(cell1.innerHTML);
             }
 
         }
