@@ -241,8 +241,10 @@
                     // swiped left
                     // alert("swiped left");
                     var content = this.innerHTML;
-                    var importentData = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
-                    alert(importentData);
+                    var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
+                    var numberImage=document.getElementById("numberimage" + numberCoulman.toString());
+                    var imageChoose=document.getElementById("imgArray" + numberCoulman.toString());
+                    alert(numberImage);   alert(imageChoose);
 
                     /*/
                                      var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
