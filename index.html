@@ -220,6 +220,7 @@
         };
 
         function moveTouch(e) {
+            alert(e.id);
             if (initialX === null) {
                 return;
             }
@@ -433,7 +434,6 @@
             document.getElementById("products"+i.toString()).addEventListener("touchstart", startTouch, false);
             document.getElementById("products"+i.toString()).addEventListener("touchmove", moveTouch, false);
             }
-            alert("22");
         }
     </script>
 
