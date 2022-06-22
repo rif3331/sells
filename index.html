@@ -293,11 +293,6 @@
                     var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
                     var linkImage = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
                     var imageChoose = linkImage.split('☼');
-                    // alert(parseInt(numberImage)+1);
-                    //לשנות את ה8 בFORWARD
-                    var numberCoulman = content.slice(content.indexOf("id=") + 8, content.indexOf(" src=") - 1);
-                    var centerLinkImage = document.getElementById("products" + numberCoulman).src;
-
                     var indexImage = imageChoose[parseInt(numberImage) - 1];
                     document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) - 1;
                     if (indexImage == undefined) {
