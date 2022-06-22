@@ -490,7 +490,7 @@
                 cell1.innerHTML += "<a style='fontSize:5px' id='text" + i.toString() + "'><a/>";
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
                 cell1.style.textAlign = "center";
-
+                cell1.innerHTML += "<a style='fontSize:5px' id='text2" + i.toString() + "'><a/>";
 
 
                 // alert(imageOne.length);
@@ -507,7 +507,7 @@
                     if (document.getElementById("text" + number.toString()).innerHTML == "" || document.getElementById("text" + number.toString()).innerHTML == null) {
                         document.getElementById("text" + number.toString()).style.fontSize = "10px";
                         document.getElementById("products" + number.toString()).style.opacity = "0.2";
-                        document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px' ><a style='position:absolute;right:0px ;' href='dddd'>hkhh" + phoneMen[number] + " , " + areaMen[number] + "</a></div>";
+                        document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px' >" + phoneMen[number] + " , " + areaMen[number] + "</div>";
                         document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px;margin-top:80px' >" + discripitionProduct[number] + "</div>";
                     }
                     else {
@@ -515,7 +515,9 @@
                         document.getElementById("text" + number.toString()).innerHTML = "";
 
                     }
-                    //window.open();
+
+                    document.getElementById("text2" + number.toString()).innerHTML = "<div style='position:absolute;text-align:center;width:200px;margin-top:-20px;margin-right:3px'><a href='" + phoneMen[number] + "'>להתקשר</a></div>";
+                 
                 }
 
                 var cell0 = row.insertCell(-1);
@@ -646,7 +648,6 @@
         <span style="--i:14">י</span>
         <span style="--i:15">ה</span>
     </div>
-
 
 
 
