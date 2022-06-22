@@ -328,6 +328,7 @@
                 }
                 cell0.onclick = function () {
                     var content = this.innerHTML;
+
                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
                     var aImportentData = importentData.split('^');
                     var numberImage = aImportentData[0];
@@ -481,8 +482,8 @@
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
 
                 }
-                cell1.addEventListener("touchstart", startTouch, false);
-                cell1.addEventListener("touchmove", moveTouch, false);
+                row.addEventListener("touchstart", startTouch, false);
+                row.addEventListener("touchmove", moveTouch, false);
             }
 
         }
