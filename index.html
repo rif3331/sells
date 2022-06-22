@@ -339,16 +339,11 @@
                 cell1.innerHTML += "<a style='fontSize:5px' id='text" + i.toString() + "'><a/>";
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
                 cell1.style.textAlign = "center";
-                var container = document.getElementById("products0");
-                container.addEventListener("touchstart", startTouch, false);
-                container.addEventListener("touchmove", moveTouch, false);
-                var initialX = null;
-                var initialY = null;
-                var container = document.getElementById("products1");
-                container.addEventListener("touchstart", startTouch, false);
-                container.addEventListener("touchmove", moveTouch, false);
-                var initialX = null;
-                var initialY = null;
+                
+                document.getElementById("products0").addEventListener("touchstart", startTouch, false);
+                document.getElementById("products0").addEventListener("touchmove", moveTouch, false);
+ 
+
                 // alert(imageOne.length);
                 for (var n = imageOne.length - 1; n > 0; n--) {
                     cell1.innerHTML += "<img id='" + n.toString() + "point" + i.toString() + "' style='width:36px;height:39px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
