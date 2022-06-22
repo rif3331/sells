@@ -82,10 +82,7 @@
         }
     </style>
     <script>
-        function clickImage() {
-            alert("fsdf");
-            document.getElementById("chek").style.opacity = "0.5";
-        }
+       
         // When the user scrolls down 50px from the top of the document, resize the header's font size
         window.onscroll = function () { scrollFunction() };
 
@@ -325,7 +322,7 @@
                     var centerLinkImage = document.getElementById("products" + numberCoulman).src;
 
                     var indexImage = imageChoose[parseInt(numberImage) - 1];
-
+                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=numberImage;
                     if (indexImage == undefined) {
                         indexImage = imageChoose[imageChoose.length - 1];
                         document.getElementById("aback" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
@@ -427,6 +424,7 @@
                     var centerLinkImage = document.getElementById("products" + numberCoulman).src;
 
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
+                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=numberImage;
 
                     if (indexImage == undefined) {
                         indexImage = imageChoose[0];
