@@ -239,21 +239,21 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
-                   // alert("swiped left");
-                      var content = this.innerHTML;
-                      var importentData = content.slice(content.indexOf('image"><img id=') + 15, content.indexOf('style="width:'));
-                      alert(content);
+                    // alert("swiped left");
+                    var content = this.innerHTML;
+                    var importentData = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
+                    alert(importentData);
 
-                       /*/
-                                        var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
-                                        var aImportentData = importentData.split('^');
-                                        var linkImage = aImportentData[1];
+                    /*/
+                                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
+                                     var aImportentData = importentData.split('^');
+                                     var linkImage = aImportentData[1];
 
-                                        var numberImage = aImportentData[0];
-                                        var imageChoose = linkImage.split('☼');
-                                        var numberCoulman = content.slice(content.indexOf("id=") + 8, content.indexOf(" src=") - 1);
-                                        var indexImage = imageChoose[parseInt(numberImage) - 1];
-                     /*/
+                                     var numberImage = aImportentData[0];
+                                     var imageChoose = linkImage.split('☼');
+                                     var numberCoulman = content.slice(content.indexOf("id=") + 8, content.indexOf(" src=") - 1);
+                                     var indexImage = imageChoose[parseInt(numberImage) - 1];
+                  /*/
 
 
 
@@ -386,7 +386,7 @@
                 cell1.style.fontSize = "18px";
                 cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
                 cell1.innerHTML += "<a style= font-size:16px>" + price[i] + "₪</a><br><br>";
-                cell1.innerHTML += "<a id=imgArray" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
+           
                 cell1.onclick = function () {
                     var content = this.innerHTML;
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
@@ -465,10 +465,16 @@
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
 
                 }
+                var content = cell0.innerHTML;
+                var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
+                var aImportentData = importentData.split('^');
+                var numberImage = aImportentData[0];
+                cell1.innerHTML += "<a id=imgArray" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
+                cell1.innerHTML += "<a id=numberimage" + i.toString() + " style='display:none;'>0</a>";
                 cell1.addEventListener("touchstart", startTouch, false);
                 cell1.addEventListener("touchmove", moveTouch, false);
 
-                //  alert(cell1.innerHTML);
+                
             }
 
         }
