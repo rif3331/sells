@@ -340,11 +340,7 @@
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
                 cell1.style.textAlign = "center";
 
-                document.getElementById("products0").addEventListener("touchstart", startTouch, false);
-                document.getElementById("products0").addEventListener("touchmove", moveTouch, false);
-                document.getElementById("products1").addEventListener("touchstart", startTouch, false);
-                document.getElementById("products1").addEventListener("touchmove", moveTouch, false);
-                alert("sdfsd");
+                
 
                 // alert(imageOne.length);
                 for (var n = imageOne.length - 1; n > 0; n--) {
@@ -432,7 +428,10 @@
                 }
 
             }
-
+            document.getElementById("products0").addEventListener("touchstart", startTouch, false);
+                document.getElementById("products0").addEventListener("touchmove", moveTouch, false);
+                document.getElementById("products1").addEventListener("touchstart", startTouch, false);
+                document.getElementById("products1").addEventListener("touchmove", moveTouch, false);
         }
     </script>
 
