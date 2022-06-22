@@ -340,7 +340,7 @@
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
                 cell1.style.textAlign = "center";
 
-                
+
 
                 // alert(imageOne.length);
                 for (var n = imageOne.length - 1; n > 0; n--) {
@@ -348,7 +348,7 @@
                 }
                 cell1.style.fontSize = "18px";
                 cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
-                cell1.innerHTML +="<a style= font-size:16px>"+ price[i] + "₪</a><br><br>";
+                cell1.innerHTML += "<a style= font-size:16px>" + price[i] + "₪</a><br><br>";
                 cell1.onclick = function () {
                     var content = this.innerHTML;
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
@@ -429,10 +429,11 @@
                 }
 
             }
+            for (var i = 0; i < imageUrl.length; i++) {
             document.getElementById("products0").addEventListener("touchstart", startTouch, false);
-                document.getElementById("products0").addEventListener("touchmove", moveTouch, false);
-                document.getElementById("products1").addEventListener("touchstart", startTouch, false);
-                document.getElementById("products1").addEventListener("touchmove", moveTouch, false);
+            document.getElementById("products0").addEventListener("touchmove", moveTouch, false);
+            }
+            alert("fsd");
         }
     </script>
 
