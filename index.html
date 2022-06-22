@@ -493,7 +493,6 @@
                 for (var n = imageOne.length - 1; n > 0; n--) {
                     cell1.innerHTML += "<img id='" + n.toString() + "point" + i.toString() + "' style='width:36px;height:39px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
                 }
-                cell1.style.fontSize = "18px";
                 cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
                 cell1.innerHTML += "<a style= font-size:16px>" + price[i] + "₪</a><br><br>";
 
@@ -502,7 +501,7 @@
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
 
                     if (document.getElementById("text" + number.toString()).innerHTML == "" || document.getElementById("text" + number.toString()).innerHTML == null) {
-                        document.getElementById("text" + number.toString()).style.fontSize = "14px";
+                        document.getElementById("text" + number.toString()).style.fontSize = "10px";
                         document.getElementById("products" + number.toString()).style.opacity = "0.2";
                         document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px' >" + phoneMen[number] + " , " + areaMen[number] + "</div>";
                         document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px;margin-top:80px' >" + discripitionProduct[number] + "</div>";
