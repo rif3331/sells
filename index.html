@@ -212,7 +212,7 @@
 
 
         );
-        
+
         function startTouch(e) {
             initialX = e.touches[0].clientX;
             initialY = e.touches[0].clientY;
@@ -284,19 +284,20 @@
                         document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.top = "0px";
 
                     }
-                  
-                    document.getElementById("products" + numberCoulman).className = null;
-                    alert(document.getElementById("products" + numberCoulman).className);
-                    document.getElementById("products" + numberCoulman).style.width="209px";
-                    document.getElementById("products" + numberCoulman).style.height="200px";
-                    document.getElementById("products" + numberCoulman).style.display="block";
-                    document.getElementById("products" + numberCoulman).style.transition=".5s ease";
-                    document.getElementById("products" + numberCoulman).style.backfaceVisibility="hidden";
-                    document.getElementById("products" + numberCoulman).style. backgroundImage="none";
-                    document.getElementById("products" + numberCoulman).className="w3-container w3-center w3-animate-right";
+                    setTimeout(function () {
+                        document.getElementById("products" + numberCoulman).className = null;
+                    }, 500);
+                    //  alert(document.getElementById("products" + numberCoulman).className);
+                    document.getElementById("products" + numberCoulman).style.width = "209px";
+                    document.getElementById("products" + numberCoulman).style.height = "200px";
+                    document.getElementById("products" + numberCoulman).style.display = "block";
+                    document.getElementById("products" + numberCoulman).style.transition = ".5s ease";
+                    document.getElementById("products" + numberCoulman).style.backfaceVisibility = "hidden";
+                    document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
+                    document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-right";
                     document.getElementById("products" + numberCoulman).src = indexImage;
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
-                   
+
 
                 } else {
                     // swiped right
@@ -344,19 +345,19 @@
 
 
                     }
-                    document.getElementById("products" + numberCoulman).style.width="209px";
-                    document.getElementById("products" + numberCoulman).style.height="200px";
-                    document.getElementById("products" + numberCoulman).style.display="block";
-                    document.getElementById("products" + numberCoulman).style.transition=".5s ease";
-                    document.getElementById("products" + numberCoulman).style.backfaceVisibility="hidden";
-                    document.getElementById("products" + numberCoulman).style. backgroundImage="none";
-                    document.getElementById("products" + numberCoulman).className="w3-container w3-center w3-animate-left";
+                    document.getElementById("products" + numberCoulman).style.width = "209px";
+                    document.getElementById("products" + numberCoulman).style.height = "200px";
+                    document.getElementById("products" + numberCoulman).style.display = "block";
+                    document.getElementById("products" + numberCoulman).style.transition = ".5s ease";
+                    document.getElementById("products" + numberCoulman).style.backfaceVisibility = "hidden";
+                    document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
+                    document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-left";
                     document.getElementById("products" + numberCoulman).src = indexImage;
-                   
 
-                
+
+
                     // alert(document.getElementById("aback" + numberCoulman).innerHTML);
-                  
+
                 }
 
             } else {
@@ -574,7 +575,7 @@
 
 <body id="body" onload="displayProducts()">
 
-    <div  style="z-index:2;" id="header">
+    <div style="z-index:2;" id="header">
         <img class="w3-container w3-center w3-animate-zoom" id="logo" src="https://i.im.ge/2022/06/18/rGzVi1.png">
     </div>
 
@@ -612,7 +613,7 @@
         <span style="--i:15">ה</span>
     </div>
 
-    
+
 
 
 
