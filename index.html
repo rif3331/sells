@@ -239,8 +239,8 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     var content = this.innerHTML;
-                    alert(content);
                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
+                    alert(importentData);
                     var aImportentData = importentData.split('^');
                     var numberImage = aImportentData[0];
                     var linkImage = aImportentData[1];
