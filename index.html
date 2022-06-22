@@ -238,7 +238,7 @@
             if (Math.abs(diffX) > Math.abs(diffY)) {
                 // sliding horizontally
                 if (diffX > 0) {
-                    var content = this.innerHTML;
+                    var content = this.innerHTML.slice(content.indexOf("foward"), content.length);;
                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
                     alert(content);
                     var aImportentData = importentData.split('^');
