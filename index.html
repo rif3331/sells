@@ -240,14 +240,13 @@
                 if (diffX > 0) {
                     var content = this.innerHTML;
                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
-                    alert("3");
+                    alert("4");
                     var aImportentData = importentData.split('^');
                  
                     var numberImage = aImportentData[0];
                     var linkImage = aImportentData[1];
-                    
+                    alert(linkImage);
                     var imageChoose = linkImage.split('☼');
-                    alert("fdsfds");
                     // alert(parseInt(numberImage)+1);
                     var numberCoulman = content.slice(content.indexOf("id=") + 10, content.indexOf(" src=") - 1);
                     var centerLinkImage = document.getElementById("products" + numberCoulman).src;
