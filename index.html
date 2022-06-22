@@ -243,8 +243,8 @@
                     alert("swiped left");
                 } else {
                     // swiped right
-                    alert(this.id);
-                    alert("swiped innerHTML");
+                    alert(this.innerHTML);
+                    alert("swiped");
                 }
             }
 
@@ -430,9 +430,9 @@
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
 
                 }
-                document.getElementById("products" + i.toString()).addEventListener("touchstart", startTouch, false);
-                document.getElementById("products" + i.toString()).addEventListener("touchmove", moveTouch, false);
-                
+                cell1.addEventListener("touchstart", startTouch, false);
+                cell1.addEventListener("touchmove", moveTouch, false);
+
             }
 
         }
