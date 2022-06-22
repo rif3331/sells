@@ -242,8 +242,8 @@
                     // alert("swiped left");
                     var content = this.innerHTML;
                     var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
-                    var numberImage=document.getElementById("numberimage" + numberCoulman.toString());
-                    var imageChoose=document.getElementById("imgArray" + numberCoulman.toString());
+                    var numberImage=document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
+                    var imageChoose=document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
                     alert(numberImage);   alert(imageChoose);
 
                     /*/
