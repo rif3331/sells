@@ -236,23 +236,11 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
-                    // alert("swiped left");
-                    var content = this.innerHTML;
-                    var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
-                    var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
-                    var imageChoose = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
-                   
-
-                } else {
-                    // swiped right
                     var content = this.innerHTML;
                     var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
                     var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
                     var linkImage = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
                     var imageChoose = linkImage.split('☼');
-                   
-
-
 
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
                     document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) + 1;
@@ -296,6 +284,11 @@
                     }
                     document.getElementById("products" + numberCoulman).src = indexImage;
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
+                   
+
+                } else {
+                    // swiped right
+                  
                 }
 
             } else {
