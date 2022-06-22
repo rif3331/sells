@@ -245,13 +245,13 @@
                     var numberImage = aImportentData[0];
                     var linkImage = aImportentData[1];
                     var imageChoose = linkImage.split('☼');
-                
+                    alert("fdsfds");
                     // alert(parseInt(numberImage)+1);
                     var numberCoulman = content.slice(content.indexOf("id=") + 10, content.indexOf(" src=") - 1);
                     var centerLinkImage = document.getElementById("products" + numberCoulman).src;
 
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
-                    alert("fdsfds");
+                
                     if (indexImage == undefined) {
                         indexImage = imageChoose[0];
                         document.getElementById("afoward" + numberCoulman).innerHTML = "0^" + linkImage;
