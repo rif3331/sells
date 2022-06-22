@@ -8,44 +8,47 @@
 
 
     <style>
-CSSResult Skip Results Iframe
-EDIT ON
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+        CSSResult Skip Results Iframe EDIT ON * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-body {
+        body {
 
-  font-family: 'Heebo';
-    margin: 0;
- 
-}
-.waviy {
-  position: relative;
-}
-.waviy span {
-  position: relative;
-  display: inline-block;
-  font-size: 40px;
-  color: #fff;
-  text-transform: uppercase;
-  animation: flip 3s infinite;
-  animation-delay: calc(-5s)
-}
-@keyframes flip {
-  0%,80% {
-    transform: rotateY(360deg) 
-  }
-}
+            font-family: 'Heebo';
+            margin: 0;
+
+        }
+
+        .waviy {
+            position: relative;
+        }
+
+        .waviy span {
+            position: relative;
+            display: inline-block;
+            font-size: 40px;
+            color: #fff;
+            text-transform: uppercase;
+            animation: flip 3s infinite;
+            animation-delay: calc(-5s)
+        }
+
+        @keyframes flip {
+
+            0%,
+            80% {
+                transform: rotateY(360deg)
+            }
+        }
 
 
         * {
             box-sizing: border-box;
         }
 
-       
+
 
         table {
             font-family: 'Heebo';
@@ -73,7 +76,6 @@ body {
         .image {
             width: 209px;
             height: 200px;
-            opacity: 1;
             display: block;
             transition: .5s ease;
             backface-visibility: hidden;
@@ -81,6 +83,11 @@ body {
         }
     </style>
     <script>
+        function clickImage()
+        {
+            alert("fsdf");
+            document.getElementById("chek").style.opacity="0.5";
+        }
         // When the user scrolls down 50px from the top of the document, resize the header's font size
         window.onscroll = function () { scrollFunction() };
 
@@ -206,7 +213,7 @@ body {
 
                 cell0.innerHTML += "<a id=aback" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
                 if (imageOne.length == "1") {
-                   // cell0.style.visibility = "hidden";
+                    // cell0.style.visibility = "hidden";
                 }
                 cell0.onclick = function () {
                     var content = this.innerHTML;
@@ -238,7 +245,7 @@ body {
                         document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.width = "40px";
                         document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.height = "41px";
                         document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.top = "0px";
-                      
+
                     }
                     else {
                         document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) - 1).toString() + "^" + linkImage;
@@ -255,7 +262,7 @@ body {
                         document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.width = "40px";
                         document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.height = "41px";
                         document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.top = "0px";
-                        
+
 
                     }
                     document.getElementById("products" + numberCoulman).src = indexImage;
@@ -270,7 +277,8 @@ body {
                 var cell1 = row.insertCell(-1);
                 cell1.style.fontSize = "30px";
                 cell1.style.direction = "rtl"; cell1.style.textAlign = "center";
-                cell1.innerHTML = nameProduct[i];
+                cell1.innerHTML ="<a>"+ nameProduct[i]+"<a/>";
+                cell1.innerHTML+="<a style='fontSize:5px' id='text" + i.toString() + "'><a/>";
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
                 cell1.style.textAlign = "center";
                 // alert(imageOne.length);
@@ -278,9 +286,24 @@ body {
                     cell1.innerHTML += "<img id='" + n.toString() + "point" + i.toString() + "' style='width:36px;height:39px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
                 }
                 cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
-                cell1.innerHTML += "מחיר : " + price[i] + "₪";
+                cell1.innerHTML += price[i] + "₪";
                 cell1.onclick = function () {
-                    // alert(this.innerHTML);
+                    var content = this.innerHTML;
+                    var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
+
+                    if(document.getElementById("text"+number.toString()).innerHTML==""||document.getElementById("text"+number.toString()).innerHTML==null)
+                    {
+                    document.getElementById("text"+ number.toString()).style.fontSize="14px";
+                    document.getElementById("products"+number.toString()).style.opacity="0.2";
+                    document.getElementById("text"+number.toString()).innerHTML+="<div style='position:absolute;text-align:center;width:200px' >אביב:050-34775526, רק הודעותתתתתתת</div>";
+                    document.getElementById("text"+number.toString()).innerHTML+="<div style='position:absolute;text-align:center;width:200px;margin-top:80px' >שמלה במצב מצוין נקנתה לפני שנתיים, נמכרת בגלל המידה</div>";
+                    }
+                    else
+                    {
+                        document.getElementById("products"+number.toString()).style.opacity="1";
+                        document.getElementById("text"+number.toString()).innerHTML="";
+
+                    }
                     //window.open();
                 }
 
@@ -309,7 +332,7 @@ body {
                         indexImage = imageChoose[0];
                         document.getElementById("afoward" + numberCoulman).innerHTML = "0^" + linkImage;
                         document.getElementById("aback" + numberCoulman).innerHTML = "0^" + linkImage;
-                        for (var i = imageChoose.length-1; i >= 0; i--) {
+                        for (var i = imageChoose.length - 1; i >= 0; i--) {
                             if (i != (parseInt(imageChoose.length)).toString()) {
                                 document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
                                 document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
@@ -326,7 +349,7 @@ body {
                     else {
                         document.getElementById("afoward" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
                         document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
-                        for (var i = imageChoose.length-1; i >= 0; i--) {
+                        for (var i = imageChoose.length - 1; i >= 0; i--) {
                             if (i != (parseInt(imageChoose.length)).toString()) {
                                 document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
                                 document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
@@ -361,37 +384,42 @@ body {
     <div id="tableDiv" style="position:absolute;margin-top:400px;">
 
         <table style="margin-left:4px ;" id="displayProducts">
-          <tr></tr>  
+            <tr></tr>
             <tr>
                 <td id="firstRow" colspan="6"
                     style="direction:rtl;font-size:40px;width:320px;background-color:black;color:white;;text-align:center">
             </tr>
-          
+
         </table>
 
     </div>
 
-    
 
-      
-      <div style="position:absolute;left:75px;top:-2px;z-index:5;direction: rtl;width:400px ;" class="waviy">
-          <span style="--i:1">מ</span>
-          <span style="--i:2">כ</span>
-          <span style="--i:3">י</span>
-          <span style="--i:4">ר</span>
-          <span style="--i:5">ו</span>
-          <span style="--i:6">ת</span>
-          <span style="--i:7">&nbsp</span>
-          <span style="--i:8">י</span>
-          <span style="--i:9">ד</span>
-          <span style="--i:10">&nbsp</span>
-          <span style="--i:11">ש</span>
-          <span style="--i:12">נ</span>
-          <span style="--i:13">י</span>
-          <span style="--i:14">י</span>
-          <span style="--i:15">ה</span>
-         </div>
-    
+
+
+    <div style="position:absolute;left:75px;top:-2px;z-index:5;direction: rtl;width:400px ;" class="waviy">
+        <span style="--i:1">מ</span>
+        <span style="--i:2">כ</span>
+        <span style="--i:3">י</span>
+        <span style="--i:4">ר</span>
+        <span style="--i:5">ו</span>
+        <span style="--i:6">ת</span>
+        <span style="--i:7">&nbsp</span>
+        <span style="--i:8">י</span>
+        <span style="--i:9">ד</span>
+        <span style="--i:10">&nbsp</span>
+        <span style="--i:11">ש</span>
+        <span style="--i:12">נ</span>
+        <span style="--i:13">י</span>
+        <span style="--i:14">י</span>
+        <span style="--i:15">ה</span>
+    </div>
+
+    <div style="position:absolute;right:75px;top:-2px;z-index:5;direction: rtl;width:200px ;">
+        <img onclick="clickImage()" id="chek" src="https://i.im.ge/2022/06/18/rGzVi1.png">
+    </div>
+
+
 
 </body>
 
