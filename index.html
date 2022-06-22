@@ -215,16 +215,20 @@
 
         );
         function displayProducts() {
+            document.addEventListener('swiped-right', function (e) {
+                alert("dsfsd");
+                console.log(e.target); // the element that was swiped
+            });
             var tableProducts = document.getElementById("displayProducts");
 
             for (var i = 0; i < imageUrl.length; i++) {
                 var imageOne = imageUrl[i].split('☼');
                 if (i % 2 == 0)
                     var row = tableProducts.insertRow(-1);
-              //  row.style.border = "solid";
+                //  row.style.border = "solid";
 
                 var cell0 = row.insertCell(-1);
-            //    cell0.style.borderLeft = "solid";
+                //    cell0.style.borderLeft = "solid";
                 cell0.innerHTML = "<img  id='back" + i.toString() + "'src='https://i.im.ge/2022/06/22/uomUCm.png' style='cursor:pointer;width: 37px;height: 37px;  transform: rotate(180deg);;'>";
 
                 cell0.innerHTML += "<a id=aback" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
@@ -322,7 +326,7 @@
                 }
 
                 var cell0 = row.insertCell(-1);
-               // cell0.style.borderRight = "solid";
+                // cell0.style.borderRight = "solid";
                 cell0.innerHTML = "<img id='foward" + i.toString() + "' src='https://i.im.ge/2022/06/22/uomUCm.png' style='cursor:pointer;width: 40px;height: 40px;'>";
                 cell0.innerHTML += "<a id=afoward" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
 
