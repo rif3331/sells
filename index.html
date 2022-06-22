@@ -239,19 +239,19 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
-                    alert("swiped left");
-                    alert(this.innerHTML);
-                    /*/   var content = this.innerHTML;
+                   // alert("swiped left");
+                      var content = this.innerHTML;
+                      var importentData = content.slice(content.indexOf("<img id=") + 15, content.indexOf("relative;top"));
+                      alert(importentData);
+
+                       /*/
                                         var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
                                         var aImportentData = importentData.split('^');
-                                        var numberImage = aImportentData[0];
                                         var linkImage = aImportentData[1];
+
+                                        var numberImage = aImportentData[0];
                                         var imageChoose = linkImage.split('☼');
-                                        // alert(parseInt(numberImage)+1);
-                                        //לשנות את ה8 בFORWARD
                                         var numberCoulman = content.slice(content.indexOf("id=") + 8, content.indexOf(" src=") - 1);
-                                        var centerLinkImage = document.getElementById("products" + numberCoulman).src;
-                    
                                         var indexImage = imageChoose[parseInt(numberImage) - 1];
                      /*/
 
