@@ -80,6 +80,40 @@
             backface-visibility: hidden;
             background-image: none;
         }
+
+
+
+        .some-image {
+            width: 370px;
+            height: 190px;
+            animation: fade-out;
+            animation-duration: 1s;
+        }
+
+        .hidden {
+            animation: fade-out;
+            animation-duration: 1s;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fade-out {
+            from {
+                opacity: 1
+            }
+
+            to {
+                opacity: 0
+            }
+        }
     </style>
     <script>
 
@@ -211,6 +245,23 @@
 
 
         );
+
+
+        function nextImage(str,source) {
+
+            let img = document.getElementById(str);
+            img.classList.remove('hidden');
+            setTimeout(function () {
+                img.classList.add('hidden');
+            }, animationTime - 1000);
+            img.src = source;
+
+
+            setTimeout(nextImage, animationTime);
+        }
+
+
+
         function startTouch(e) {
             initialX = e.touches[0].clientX;
             initialY = e.touches[0].clientY;
@@ -284,7 +335,7 @@
                     }
                     document.getElementById("products" + numberCoulman).src = indexImage;
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
-                   
+
 
                 } else {
                     // swiped right
@@ -332,10 +383,10 @@
 
 
                     }
-                    document.getElementById("products" + numberCoulman).src = indexImage;
+                    nextImage("products" + numberCoulman,indexImage)
 
                     // alert(document.getElementById("aback" + numberCoulman).innerHTML);
-                  
+
                 }
 
             } else {
