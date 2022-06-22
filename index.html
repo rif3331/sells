@@ -340,9 +340,9 @@
                 cell1.innerHTML += "<img id='products" + i.toString() + "' src='" + imageOne[0] + "'class='image'>";
                 cell1.style.textAlign = "center";
 
-                document.getElementById("products0").addEventListener("touchstart", startTouch, false);
-                document.getElementById("products0").addEventListener("touchmove", moveTouch, false);
-
+                document.getElementById("products" + i.toString()).addEventListener("touchstart", startTouch, false);
+                document.getElementById("products" + i.toString()).addEventListener("touchmove", moveTouch, false);
+                alert("fdf");
 
                 // alert(imageOne.length);
                 for (var n = imageOne.length - 1; n > 0; n--) {
