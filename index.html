@@ -239,12 +239,20 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
-                    alert(this.innerHTML);
-                    alert("swiped left");
+                    console.log("swiped left");
                 } else {
                     // swiped right
-                    alert(this.innerHTML);
-                    alert("swiped right");
+                    console.log("swiped right");
+                }
+            } else {
+                // sliding vertically
+                if (diffY > 0) {
+                    // swiped up
+                    scrollFunction();
+                    alert("swiped up");
+                } else {
+                    // swiped down
+                    console.log("swiped down");
                 }
             }
 
