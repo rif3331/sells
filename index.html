@@ -240,6 +240,7 @@
                 if (diffX > 0) {
                     // swiped left
                     var content = this.innerHTML;
+                    alert(content);
                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
                     var aImportentData = importentData.split('^');
                     var numberImage = aImportentData[0];
