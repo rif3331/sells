@@ -239,8 +239,60 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
-                    alert(this.innerHTML);
-                    alert("swiped left");
+                    var content = this.innerHTML;
+                    var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
+                    var aImportentData = importentData.split('^');
+                    var numberImage = aImportentData[0];
+                    var linkImage = aImportentData[1];
+                    var imageChoose = linkImage.split('☼');
+                    // alert(parseInt(numberImage)+1);
+                    //לשנות את ה8 בFORWARD
+                    var numberCoulman = content.slice(content.indexOf("id=") + 8, content.indexOf(" src=") - 1);
+                    var centerLinkImage = document.getElementById("products" + numberCoulman).src;
+
+                    var indexImage = imageChoose[parseInt(numberImage) - 1];
+
+                    if (indexImage == undefined) {
+                        indexImage = imageChoose[imageChoose.length - 1];
+                        document.getElementById("aback" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
+                        document.getElementById("afoward" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
+                        for (var i = 0; i < imageChoose.length; i++) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.top = "0px";
+
+                    }
+                    else {
+                        document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) - 1).toString() + "^" + linkImage;
+                        document.getElementById("afoward" + numberCoulman).innerHTML = (parseInt(numberImage) - 1).toString() + "^" + linkImage;
+                        for (var i = imageChoose.length; i > 0; i--) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.top = "0px";
+
+
+                    }
+                    document.getElementById("products" + numberCoulman).src = indexImage;
+
+                    // alert(document.getElementById("aback" + numberCoulman).innerHTML);
+
+
                 } else {
                     // swiped right
                     alert(this.innerHTML);
@@ -276,7 +328,8 @@
                 if (imageOne.length == "1") {
                     // cell0.style.visibility = "hidden";
                 }
-                cell0.onclick = function () {
+                cell0.onclick = function () 
+                {
                     var content = this.innerHTML;
                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
                     var aImportentData = importentData.split('^');
