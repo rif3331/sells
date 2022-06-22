@@ -82,7 +82,7 @@
         }
     </style>
     <script>
-       
+
         // When the user scrolls down 50px from the top of the document, resize the header's font size
         window.onscroll = function () { scrollFunction() };
 
@@ -239,37 +239,63 @@
                     // alert("swiped left");
                     var content = this.innerHTML;
                     var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
-                    var numberImage=document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
-                    var imageChoose=document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
-                    alert(content);
-                    alert(numberImage);   alert(imageChoose);
-
-                    /*/
-                                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
-                                     var aImportentData = importentData.split('^');
-                                     var linkImage = aImportentData[1];
-
-                                     var numberImage = aImportentData[0];
-                                     var imageChoose = linkImage.split('☼');
-                                     var numberCoulman = content.slice(content.indexOf("id=") + 8, content.indexOf(" src=") - 1);
-                                     var indexImage = imageChoose[parseInt(numberImage) - 1];
-                  /*/
-
-
-
-
-
-
-
-
-
-
-
+                    var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
+                    var imageChoose = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
+                   
 
                 } else {
                     // swiped right
-                    alert("swiped right");
+                    var content = this.innerHTML;
+                    var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
+                    var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
+                    var imageChoose = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
+
+
+
+                    var indexImage = imageChoose[parseInt(numberImage) + 1];
+                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) + 1;
+
+
+                    if (indexImage == undefined) {
+                        indexImage = imageChoose[0];
+                        document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = "0";
+                        document.getElementById("afoward" + numberCoulman).innerHTML = "0^" + linkImage;
+                        document.getElementById("aback" + numberCoulman).innerHTML = "0^" + linkImage;
+                        for (var i = imageChoose.length - 1; i >= 0; i--) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById("0" + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById("0" + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById("0" + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById("0" + "point" + numberCoulman).style.top = "0px";
+
+                    }
+                    else {
+                        document.getElementById("afoward" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
+                        document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
+                        for (var i = imageChoose.length - 1; i >= 0; i--) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.top = "0px";
+
+                    }
+                    document.getElementById("products" + numberCoulman).src = indexImage;
+                    // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
                 }
+
             } else {
                 // sliding vertically
                 if (diffY > 0) {
@@ -323,10 +349,10 @@
                     var centerLinkImage = document.getElementById("products" + numberCoulman).src;
 
                     var indexImage = imageChoose[parseInt(numberImage) - 1];
-                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=parseInt(numberImage) - 1;
+                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) - 1;
                     if (indexImage == undefined) {
                         indexImage = imageChoose[imageChoose.length - 1];
-                        document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=imageChoose.length - 1;
+                        document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = imageChoose.length - 1;
                         document.getElementById("aback" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
                         document.getElementById("afoward" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
                         for (var i = 0; i < imageChoose.length; i++) {
@@ -387,7 +413,7 @@
                 cell1.style.fontSize = "18px";
                 cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
                 cell1.innerHTML += "<a style= font-size:16px>" + price[i] + "₪</a><br><br>";
-           
+
                 cell1.onclick = function () {
                     var content = this.innerHTML;
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
@@ -426,12 +452,12 @@
                     var centerLinkImage = document.getElementById("products" + numberCoulman).src;
 
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
-                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML=parseInt(numberImage) + 1;
+                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) + 1;
 
 
                     if (indexImage == undefined) {
                         indexImage = imageChoose[0];
-                        document.getElementById("numberimage" + numberCoulman.toString()).innerHTML="0";
+                        document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = "0";
                         document.getElementById("afoward" + numberCoulman).innerHTML = "0^" + linkImage;
                         document.getElementById("aback" + numberCoulman).innerHTML = "0^" + linkImage;
                         for (var i = imageChoose.length - 1; i >= 0; i--) {
@@ -475,7 +501,7 @@
                 cell1.addEventListener("touchstart", startTouch, false);
                 cell1.addEventListener("touchmove", moveTouch, false);
 
-                
+
             }
 
         }
