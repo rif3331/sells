@@ -489,13 +489,18 @@
 
         function displayProducts() {
 
-
+            var count = 0;
             var tableProducts = document.getElementById("displayProducts");
             for (var i = 0; i < imageUrl.length; i++) {
                 var imageOne = imageUrl[i].split('☼');
+                if (sinonWM != "wm" && sinonWM != aWM[i]) {
+                    continue;
+                }
                 // alert(nameProduct[i]);
-                if (i % 2 == 0)
+                if (count % 2 == 0) {
                     var row = tableProducts.insertRow(-1);
+                }
+                count++;
                 //  row.style.border = "solid";
 
                 var cell0 = row.insertCell(-1);
@@ -722,16 +727,16 @@
 
         function women() {
             dealteTable("displayProducts");
-            displayProducts();
-            sinonWM = "W";
+            sinonWM = "w";
             document.getElementById("w&m").style.display = "none";
             document.getElementById("kinds").style.display = "inline";
             document.getElementById("kinds").style.marginLeft = "110px";
+            displayProducts();
 
 
         }
         function men() {
-            sinonWM = "M";
+            sinonWM = "m";
             document.getElementById("w&m").style.display = "none";
             document.getElementById("kinds").style.display = "inline";
             document.getElementById("kinds").style.marginLeft = "110px";
