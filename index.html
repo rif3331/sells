@@ -74,8 +74,8 @@
 
 
         .image {
-            width: 280px;
-            height: 230px;
+            width: 209px;
+            height: 200px;
             display: block;
             transition: .5s ease;
             backface-visibility: hidden;
@@ -412,7 +412,7 @@
 
                 var cell0 = row.insertCell(-1);
                 //    cell0.style.borderLeft = "solid";
-                cell0.innerHTML = "<img  id='back" + i.toString() + "'src='https://i.im.ge/2022/06/22/uomUCm.png' style='display:none;cursor:pointer;width: 37px;height: 37px;  transform: rotate(180deg);;'>";
+                cell0.innerHTML = "<img  id='back" + i.toString() + "'src='https://i.im.ge/2022/06/22/uomUCm.png' style='visibility:hidden;cursor:pointer;width: 37px;height: 37px;  transform: rotate(180deg);;'>";
 
                 cell0.innerHTML += "<a id=aback" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
                 if (imageOne.length == "1") {
@@ -532,7 +532,7 @@
 
                 var cell0 = row.insertCell(-1);
                 // cell0.style.borderRight = "solid";
-                cell0.innerHTML = "<img id='foward" + i.toString() + "' src='https://i.im.ge/2022/06/22/uomUCm.png' style='display:none;cursor:pointer;width: 40px;height: 40px;'>";
+                cell0.innerHTML = "<img id='foward" + i.toString() + "' src='https://i.im.ge/2022/06/22/uomUCm.png' style='visibility:hidden;cursor:pointer;width: 40px;height: 40px;'>";
                 cell0.innerHTML += "<a id=afoward" + i.toString() + " style='display:none;'>0^" + imageUrl[i] + "</a>";
 
                 if (imageOne.length == "1") {
