@@ -736,12 +736,15 @@
 
         }
         function men() {
+            dealteTable("displayProducts");
             sinonWM = "m";
             document.getElementById("w&m").style.display = "none";
             document.getElementById("kinds").style.display = "inline";
             document.getElementById("kinds").style.marginLeft = "110px";
+            displayProducts();
         }
         function home() {
+            dealteTable("displayProducts");
             sinonWM = "wm";
             var sinonCSBE = "CSBE";
             document.getElementById("w&m").className = null;
@@ -752,7 +755,7 @@
                 document.getElementById("w&m").style.display = "inline";
                 document.getElementById("kinds").style.display = "none";
             }, 100);
-
+            displayProducts();
 
         }
     </script>
