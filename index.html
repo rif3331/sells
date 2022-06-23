@@ -88,7 +88,7 @@
         window.onscroll = function () { scrollFunction() };
 
         function scrollFunction() {
-            document.getElementById("logo").className=null;
+            document.getElementById("logo").className = null;
             if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
                 document.getElementById("logo").style.height = "200px";
                 document.getElementById("header").style.height = "100px";
@@ -305,7 +305,7 @@
                         document.getElementById("products" + numberCoulman).style.backfaceVisibility = "hidden";
                         document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
                         document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-right";
-                        
+
                         // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
                     }
 
@@ -523,7 +523,7 @@
 
                     }
 
-                 
+
                 }
 
                 var cell0 = row.insertCell(-1);
@@ -654,7 +654,11 @@
         <span style="--i:14">י</span>
         <span style="--i:15">ה</span>
     </div>
-    <marquee scrollamount="20" id="line" direction="right"  width="603" style="border: solid;position:absolute;left:3px;top:345px;z-index:6;font-size:22px;">לפרטים על המוצר לחץ עליו | לתמונות נוספות החלק לצד | להגדלת תמונה לחץ לחיצה ארוכה | להעלאת מוצר שלח את הפריט (מחיר, תמונות, מידה, פירוט מוצר) ופרטים להתקשרות (טלפון, שם, אזור בארץ)
+    <marquee scrollamount="8" id="line" direction="right" width="603"
+        style="border: solid;position:absolute;left:3px;top:345px;z-index:6;font-size:22px;">לפרטים על המוצר לחץ עליו |
+        לתמונות נוספות החלק לצד | להגדלת תמונה לחץ לחיצה ארוכה | להעלאת מוצר שלח את הפריט (מחיר, תמונות, מידה, פירוט
+        מוצר) ופרטים להתקשרות (טלפון, שם, אזור בארץ)
+    </marquee>
 </body>
 
 </html>
