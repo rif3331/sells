@@ -724,7 +724,43 @@
             }
 
         }
-
+        function cloths() {
+            dealteTable("displayProducts");
+            sinonCSBE = "בגדים";
+            document.getElementById("shows").style.display = "none";
+            document.getElementById("bags").style.display = "none";
+            document.getElementById("cloths").style.display = "inline";
+            document.getElementById("exsasoriz").style.display = "none";
+            displayProducts();
+        }
+        function shows() {
+            dealteTable("displayProducts");
+            sinonCSBE = "נעליים";
+            document.getElementById("shows").style.display = "none";
+            document.getElementById("bags").style.display = "inline";
+            document.getElementById("cloths").style.display = "none";
+            document.getElementById("exsasoriz").style.display = "none";
+            displayProducts();
+        }
+        function exsasoriz() {
+            dealteTable("displayProducts");
+            sinonCSBE = "אקססוריז";
+            document.getElementById("shows").style.display = "none";
+            document.getElementById("bags").style.display = "none";
+            document.getElementById("cloths").style.display = "none";
+            document.getElementById("exsasoriz").style.display = "inline";
+           
+            displayProducts();
+        }
+        function bags() {
+            dealteTable("displayProducts");
+            sinonCSBE = "תיקים";
+            document.getElementById("shows").style.display = "none";
+            document.getElementById("bags").style.display = "inline";
+            document.getElementById("cloths").style.display = "none";
+            document.getElementById("exsasoriz").style.display = "none";
+            displayProducts();
+        }
         function women() {
             dealteTable("displayProducts");
             sinonWM = "w";
@@ -732,8 +768,6 @@
             document.getElementById("kinds").style.display = "inline";
             document.getElementById("kinds").style.marginLeft = "110px";
             displayProducts();
-
-
         }
         function men() {
             dealteTable("displayProducts");
@@ -746,12 +780,16 @@
         function home() {
             dealteTable("displayProducts");
             sinonWM = "wm";
-            var sinonCSBE = "CSBE";
+            var sinonCSBE = "csbe";
             document.getElementById("w&m").className = null;
             document.getElementById("kinds").className = null;
             setTimeout(function () {
                 document.getElementById("w&m").className = "w3-container w3-center w3-animate-zoom";
                 document.getElementById("kinds").className = "w3-container w3-center w3-animate-zoom";
+                document.getElementById("shows").style.display = "inline";
+            document.getElementById("bags").style.display = "inline";
+            document.getElementById("cloths").style.display = "inline";
+            document.getElementById("exsasoriz").style.display = "inline";
                 document.getElementById("w&m").style.display = "inline";
                 document.getElementById("kinds").style.display = "none";
             }, 100);
@@ -781,7 +819,8 @@
         <table id="w&m" class="w3-container w3-center w3-animate-zoom"
             style="position:absolute;left:320px;top: 345px;max-width:300px;z-index:8;direction: rtl;">
             <tr>
-                <td> <button onclick="women()" id="women" style="auto;" class="button-28" role="button">נשים</button>
+                <td> <button onclick="women()" id="women" style="width:auto;" class="button-28"
+                        role="button">נשים</button>
                 </td>
                 <td> <button onclick="men()" id="men" style="width:auto;" class="button-28" role="button">גברים</button>
                 </td>
@@ -790,10 +829,14 @@
         <table id="kinds" class="w3-container w3-center w3-animate-zoom"
             style="position:absolute;left:310px;top: 349px;max-width:200px;z-index:8;direction: rtl;display:none;">
             <tr>
-                <td> <button id="cloths" style="width:auto;" class="button-28" role="button">בגדים</button></td>
-                <td> <button id="shows" style="width:auto;" class="button-28" role="button">נעליים</button></td>
-                <td> <button id="bags" style="width:auto;" class="button-28" role="button">תיקים</button></td>
-                <td> <button id="exsasoriz" style="width:auto;" class="button-28" role="button">אקססוריז</button></td>
+                <td> <button onclick="cloths()" id="cloths" style="width:auto;" class="button-28"
+                        role="button">בגדים</button></td>
+                <td> <button onclick="shows()" id="shows" style="width:auto;" class="button-28"
+                        role="button">נעליים</button></td>
+                <td> <button onclick="bags()" id="bags" style="width:auto;" class="button-28"
+                        role="button">תיקים</button></td>
+                <td> <button onclick="exsasoriz()" id="exsasoriz" style="width:auto;" class="button-28"
+                        role="button">אקססוריז</button></td>
                 <td><img id='home' onclick="home()"
                         style='width:36px;height:39px;position:relative;top:2px;cursor:pointer;'
                         src='https://i.im.ge/2022/06/23/ulmJMK.png'></td>
