@@ -258,27 +258,27 @@
             /*/11/*/
         );
         const phoneMen = new Array(
-         /*/1/*/   "אביב:050-3477526, רק הודעות",
-        /*/2/*/  "טליה: 052-4345553",
-            /*/3/*/"רומי:052-2458423",
-          /*/4/*/  "אודליה:050-3283955, בלי ווצאפ",
-            /*/5/*/"דליה:053-6733456",
-            /*/6/*/"רונית:053-2859364",
-            /*/7/*/"בתיה:050-4022977",
-            /*/8/*/"נתנאל:052-1543312",
+         /*/1/*/   "+972503477526",
+         /*/1/*/   "+972503434225",
+         /*/1/*/   "+972542233566",
+         /*/1/*/   "+972545465666",
+         /*/1/*/   "+972523139899",
+         /*/1/*/   "+972556778954",
+         /*/1/*/   "+972584545454",
+         /*/1/*/   "+972504873443",
             /*/9/*/
             /*/10/*/
             /*/11/*/
         );
         const areaMen = new Array(
-         /*/1/*/   "ירושלים",
-        /*/2/*/  "חדרה",
-            /*/3/*/"תל אביב",
-          /*/4/*/  "נתניה, בורכוב",
-            /*/5/*/"תל אביב",
-            /*/6/*/"תל אביב",
-            /*/7/*/"קיבוץ יקום",
-            /*/8/*/"זכרון יעקב"
+         /*/1/*/   "לאביב, נתניה",
+         /*/1/*/   "לדורית, הרצליה",
+         /*/1/*/   "לדנה, תל אביב",
+         /*/1/*/   "למרינה, ראשון לציון",
+         /*/1/*/   "לדינה, אשקלון",
+         /*/1/*/   "לשרון, מזכרת בתיה",
+         /*/1/*/   "לליהי, יקום",
+         /*/1/*/   "לנתנאלה, אשדוד",
             /*/9/*/
             /*/10/*/
             /*/11/*/
@@ -613,7 +613,7 @@
                         document.getElementById("text" + number.toString()).style.fontSize = "10px";
                         document.getElementById("products" + number.toString()).style.opacity = "0.2";
                         document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px;margin-top:50px' >" + discripitionProduct[number] + "</div>";
-                        document.getElementById("text2" + number.toString()).innerHTML = "<div style='position:absolute;text-align:center;width:200px;margin-top:-41px;margin-right:3px;font-size:10px'><a href='whatsapp://send?text=Hello World!&phone=+972502180883'>" + phoneMen[number] + " , " + areaMen[number] + "</a></div>";
+                        document.getElementById("text2" + number.toString()).innerHTML = "<div style='position:absolute;text-align:center;width:200px;margin-top:-41px;margin-right:3px;font-size:10px'><a href='whatsapp://send?text=Hello World!&phone=+972502180883" + phoneMen[number] + "'>שליחת הודעה " + areaMen[number] + "</a></div>";
 
                     }
                     else {
