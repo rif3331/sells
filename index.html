@@ -493,7 +493,7 @@
             var tableProducts = document.getElementById("displayProducts");
             for (var i = 0; i < imageUrl.length; i++) {
                 var imageOne = imageUrl[i].split('☼');
-                if (sinonWM != "wm" && sinonWM != aWM[i]) {
+                if (sinonWM != "wm" && sinonWM != aWM[i]||sinonCSBE != "csbe" && sinonCSBE != aKind[i]) {
                     continue;
                 }
                 // alert(nameProduct[i]);
@@ -736,8 +736,8 @@
         function shows() {
             dealteTable("displayProducts");
             sinonCSBE = "נעליים";
-            document.getElementById("shows").style.display = "none";
-            document.getElementById("bags").style.display = "inline";
+            document.getElementById("shows").style.display = "inline";
+            document.getElementById("bags").style.display = "none";
             document.getElementById("cloths").style.display = "none";
             document.getElementById("exsasoriz").style.display = "none";
             displayProducts();
@@ -764,6 +764,7 @@
         function women() {
             dealteTable("displayProducts");
             sinonWM = "w";
+            document.getElementById("tn").style.display = "inline";
             document.getElementById("w&m").style.display = "none";
             document.getElementById("kinds").style.display = "inline";
             document.getElementById("kinds").style.marginLeft = "110px";
@@ -772,6 +773,7 @@
         function men() {
             dealteTable("displayProducts");
             sinonWM = "m";
+            document.getElementById("tg").style.display = "inline";
             document.getElementById("w&m").style.display = "none";
             document.getElementById("kinds").style.display = "inline";
             document.getElementById("kinds").style.marginLeft = "110px";
@@ -779,21 +781,24 @@
         }
         function home() {
             dealteTable("displayProducts");
-            sinonWM = "wm";
-            var sinonCSBE = "csbe";
+             sinonWM = "wm";
+             sinonCSBE = "csbe";
             document.getElementById("w&m").className = null;
             document.getElementById("kinds").className = null;
             setTimeout(function () {
                 document.getElementById("w&m").className = "w3-container w3-center w3-animate-zoom";
                 document.getElementById("kinds").className = "w3-container w3-center w3-animate-zoom";
+                document.getElementById("tn").style.display = "none";
+                document.getElementById("tg").style.display = "none";
                 document.getElementById("shows").style.display = "inline";
             document.getElementById("bags").style.display = "inline";
             document.getElementById("cloths").style.display = "inline";
             document.getElementById("exsasoriz").style.display = "inline";
                 document.getElementById("w&m").style.display = "inline";
                 document.getElementById("kinds").style.display = "none";
+                displayProducts();
             }, 100);
-            displayProducts();
+        
 
         }
     </script>
@@ -885,6 +890,20 @@
             ופרטים להתקשרות- טלפון, שם, אזור בארץ למספר 050-2180883
         </marquee>
     </div>
+    <div id="tg" style="position:absolute;left:509px;top:325px;z-index:10;direction: rtl;display: none;" class="waviy">
+        <span style="--i:1">ג</span>
+        <span style="--i:2">ב</span>
+        <span style="--i:3">ר</span>
+        <span style="--i:4">י</span>
+        <span style="--i:5">ם</span>     
+    </div>
+    <div id="tn" style="position:absolute;left:519px;top:325px;z-index:10;direction: rtl;display: none;" class="waviy">
+        <span style="--i:1">נ</span>
+        <span style="--i:2">ש</span>
+        <span style="--i:3">י</span>
+        <span style="--i:4">ם</span>
+    </div>
+    
 
 
 </body>
