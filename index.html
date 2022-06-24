@@ -140,12 +140,14 @@
         function scrollFunction() {
             document.getElementById("logo").className = null;
             if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                    document.getElementById("tt").style.marginTop = "-265px";
+                    document.getElementById("tt").style.marginLeft = "20px";
+
                 document.getElementById("logo").style.height = "200px";
                 document.getElementById("header").style.height = "100px";
                 document.getElementById("header").style.paddingLeft = "150px";
                 document.getElementById("tableDiv").style.marginTop = "230px";
                 document.getElementById("line").style.display = "none";
-                document.getElementById("tt").style.display = "none";
                 document.getElementById("logos").style.marginTop = "-170px";
                 document.getElementById("logos").style.marginLeft = "-110px";
                 document.getElementById("w&m").style.display = "none";
@@ -160,6 +162,7 @@
             }
 
             else {
+                document.getElementById("tt").style.marginTop = "0px";
                 document.getElementById("logo").style.height = "400px";
                 document.getElementById("header").style.height = "400px";
                 document.getElementById("header").style.left = "0%";
@@ -938,6 +941,23 @@
                 </tr>
             </table>
         </div>
+        <div id="tt" style="position:absolute;left:180px;top:300px;z-index:5;direction: rtl;width:400px ;" class="waviy">
+            <span style="--i:1">מ</span>
+            <span style="--i:2">כ</span>
+            <span style="--i:3">י</span>
+            <span style="--i:4">ר</span>
+            <span style="--i:5">ו</span>
+            <span style="--i:6">ת</span>
+            <span style="--i:7">&nbsp</span>
+            <span style="--i:8">י</span>
+            <span style="--i:9">ד</span>
+            <span style="--i:10">&nbsp</span>
+            <span style="--i:11">ש</span>
+            <span style="--i:12">נ</span>
+            <span style="--i:13">י</span>
+            <span style="--i:14">י</span>
+            <span style="--i:15">ה</span>
+        </div>
     </div>
 
     <div id="tableDiv" style="position:absolute;margin-top:400px;">
@@ -956,23 +976,7 @@
 
 
 
-    <div id="tt" style="position:absolute;left:180px;top:300px;z-index:5;direction: rtl;width:400px ;" class="waviy">
-        <span style="--i:1">מ</span>
-        <span style="--i:2">כ</span>
-        <span style="--i:3">י</span>
-        <span style="--i:4">ר</span>
-        <span style="--i:5">ו</span>
-        <span style="--i:6">ת</span>
-        <span style="--i:7">&nbsp</span>
-        <span style="--i:8">י</span>
-        <span style="--i:9">ד</span>
-        <span style="--i:10">&nbsp</span>
-        <span style="--i:11">ש</span>
-        <span style="--i:12">נ</span>
-        <span style="--i:13">י</span>
-        <span style="--i:14">י</span>
-        <span style="--i:15">ה</span>
-    </div>
+   
     <div style="direction:ltr ;">
         <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="auto" onmouseup="this.start();"
             style="border: solid;position:absolute;left:3px;top:0px;z-index:6;font-size:16px;direction: ltr;">מדריך
