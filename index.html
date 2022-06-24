@@ -1031,6 +1031,7 @@
                             document.getElementById("h2Big").innerHTML = sizeProduct[number];
                             document.getElementById("h3Big").innerHTML = discripitionProduct[number];
                             document.getElementById("h4Big").innerHTML = price[number]+"₪";
+                            document.getElementById("h5Big").innerHTML =  "<a href='whatsapp://send?text=היי " + areaMen[number].slice(1, areaMen[number].indexOf(",")) + ", רציתי לברר על ה" + nameProduct[number] + "&phone=" + phoneMen[number] + "'>שליחת הודעה " + areaMen[number] + "</a>"
                             document.getElementById("logo").style.height = "110px";
                             document.getElementById("logo").style.marginTop = "-5px";
                             document.getElementById("logo").style.marginLeft = "75px";
@@ -1051,6 +1052,7 @@
                         document.getElementById("h2Big").innerHTML = sizeProduct[number];
                         document.getElementById("h3Big").innerHTML = discripitionProduct[number];
                         document.getElementById("h4Big").innerHTML = price[number]+"₪";
+                        document.getElementById("h5Big").innerHTML =  "<a href='whatsapp://send?text=היי " + areaMen[number].slice(1, areaMen[number].indexOf(",")) + ", רציתי לברר על ה" + nameProduct[number] + "&phone=" + phoneMen[number] + "'>שליחת הודעה " + areaMen[number] + "</a>"
                         document.getElementById("logo").style.height = "110px";
                         document.getElementById("logo").style.marginTop = "-5px";
                         document.getElementById("logo").style.marginLeft = "75px";
@@ -1405,17 +1407,17 @@
         <div id="imgWindow"
             style="position:absolute;left:1px;top:97px;z-index:30;display:none;width: 608px;height: 840px;border:solid;">
             <div id="h1Big" style="text-align:center;font-size: xx-large;direction: rtl;"></div>
-            <div id="h2Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
+            <div id="h3Big" style="text-align:center;font-size: medium;direction: rtl;"></div>
            
             <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src=""
                 style="width: 400px;height: 500px;margin-left:100px;">
-                <div id="h3Big" style="text-align:center;font-size: medium;direction: rtl;"></div>
+                <div id="h2Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
                 <div id="h4Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
-    
+                <div id="h5Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
             <img onclick="closeWindow()"
                 style="width: 40px;height: 40px;position:absolute;left:3px;top:0px;cursor:pointer;" id="logoCBig"
                 src="https://i.im.ge/2022/06/25/urirb1.png">
-            <div style="height:100px;width: 608px ;background-color: #f5b0de;position:absolute;left:-2px;top:838px;">
+            <div style="height:100px;width: 608px ;background-image: url('https://i.im.ge/2022/06/25/ur5UzS.png');position:absolute;left:-2px;top:838px;">
             </div>
         </div>
 
