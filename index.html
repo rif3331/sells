@@ -173,14 +173,13 @@
                     }
                 }
                 if (sinonWM != "wm" && sinonCSBE == "בגדים") {
-                    if (sinonWM == "w") {
+                    if (sinonWM == "w" || sinonWM == "m") {
                         document.getElementById("tn").style.marginTop = "-265px";
                         document.getElementById("tn").style.left = "525px";
                         document.getElementById("tn").className = "waviy2";
                         document.getElementById("tbgadim").style.marginTop = "-265px";
                         document.getElementById("tbgadim").style.left = "465px";
                         document.getElementById("tbgadim").className = "waviy2";
-
                     }
                     if (sinonWM == "m") {
                         document.getElementById("tg").style.marginTop = "-265px";
@@ -189,6 +188,25 @@
                         document.getElementById("tbgadim").style.marginTop = "-265px";
                         document.getElementById("tbgadim").style.left = "465px";
                         document.getElementById("tbgadim").className = "waviy2";
+
+                    }
+                }
+                if (sinonWM != "wm" && sinonCSBE == "נעליים") {
+                    if (sinonWM == "w" || sinonWM == "m") {
+                        document.getElementById("tn").style.marginTop = "-265px";
+                        document.getElementById("tn").style.left = "525px";
+                        document.getElementById("tn").className = "waviy2";
+                        document.getElementById("tnalim").style.marginTop = "-265px";
+                        document.getElementById("tnalim").style.left = "465px";
+                        document.getElementById("tnalim").className = "waviy2";
+                    }
+                    if (sinonWM == "m") {
+                        document.getElementById("tg").style.marginTop = "-265px";
+                        document.getElementById("tg").style.left = "525px";
+                        document.getElementById("tg").className = "waviy2";
+                        document.getElementById("tnalim").style.marginTop = "-265px";
+                        document.getElementById("tnalim").style.left = "465px";
+                        document.getElementById("tnalim").className = "waviy2";
 
                     }
                 }
@@ -204,7 +222,7 @@
                 document.getElementById("kinds").style.display = "none";
                 document.getElementById("ttikim").style.display = "none";
                 document.getElementById("texso").style.display = "none";
-                document.getElementById("tnalim").style.display = "none";
+               // document.getElementById("tnalim").style.display = "none";
                 // document.getElementById("tbgadim").style.display = "none";
 
             }
@@ -1041,8 +1059,8 @@
 
             }
             document.getElementById("side").style.height = tableProducts.offsetHeight + 250 + "px";
-         //   alert(widthh - 390);
-            document.getElementById("side").style.width = (widthh - 390)*1.53 + "px";
+            //   alert(widthh - 390);
+            document.getElementById("side").style.width = (widthh - 390) * 1.53 + "px";
 
 
         }
@@ -1322,10 +1340,10 @@
 
 
 
-    <div  style="direction:ltr ;">
+    <div style="direction:ltr ;">
         <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="200px" onmouseup="this.start();"
             style="border: solid;position:absolute;left:295px;top:8px;z-index:6;font-size:12px;direction: ltr;">
-להעלאת מוצר לחץ כאן 
+            להעלאת מוצר לחץ כאן
         </marquee>
     </div>
     <div id="side"
