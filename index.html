@@ -1027,6 +1027,8 @@
                             document.getElementById("imgWindow").style.display = "inline";
                             tableProducts.style.opacity = 0.05;
                             document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
+                            document.getElementById("h1Big").innerHTML = nameProduct[number];
+                            document.getElementById("h2Big").innerHTML = sizeProduct[number];
                             document.getElementById("logo").style.height = "110px";
                             document.getElementById("logo").style.marginTop = "-5px";
                             document.getElementById("logo").style.marginLeft = "75px";
@@ -1043,6 +1045,8 @@
                         document.getElementById("imgWindow").style.display = "inline";
                         tableProducts.style.opacity = 0.05;
                         document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
+                        document.getElementById("h1Big").innerHTML = nameProduct[number];
+                        document.getElementById("h2Big").innerHTML = sizeProduct[number];
                         document.getElementById("logo").style.height = "110px";
                         document.getElementById("logo").style.marginTop = "-5px";
                         document.getElementById("logo").style.marginLeft = "75px";
@@ -1257,7 +1261,7 @@
             document.getElementById("cloths").style.opacity = "0.2";
             document.getElementById("exsasoriz").style.opacity = "0.2";
             document.getElementById("bags").style.opacity = "1";
-       
+
             document.getElementById("ttikim").style.display = "inline";
 
             document.getElementById("texso").style.display = "none";
@@ -1339,7 +1343,7 @@
             document.getElementById("logo1").style.width = "36px";
 
         }
-       
+
 
     </script>
 
@@ -1382,17 +1386,19 @@
                             role="button">תיקים</button></td>
                     <td> <button onclick="exsasoriz()" id="exsasoriz" style="width:auto;" class="button-28"
                             role="button">אקססוריז</button></td>
-              
+
                     <td><img id='home' onclick="home()"
-                        style='width:60px;height:29px;position:relative;top:2px;cursor:pointer;'
+                            style='width:60px;height:29px;position:relative;top:2px;cursor:pointer;'
                             src='https://i.im.ge/2022/06/24/uru1rz.png'></td>
                 </tr>
             </table>
         </div>
         <div id="imgWindow"
             style="position:absolute;left:1px;top:97px;z-index:30;display:none;width: 608px;height: 840px;border:solid;">
-
-            <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src="" style="width: 600px;height: 400px;">
+            <h1 id="h1Big" style="text-align:center;"></h1>
+            <h2 id="h2Big" style="text-align:center;"></h2>
+            <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src=""
+                style="width: 400px;height: 500px;position:absolute;left:100px;">
             <img onclick="closeWindow()"
                 style="width: 40px;height: 40px;position:absolute;left:3px;top:0px;cursor:pointer;" id="logoCBig"
                 src="https://i.im.ge/2022/06/25/urirb1.png">
