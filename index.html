@@ -1029,6 +1029,8 @@
                             document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
                             document.getElementById("h1Big").innerHTML = nameProduct[number];
                             document.getElementById("h2Big").innerHTML = sizeProduct[number];
+                            document.getElementById("h3Big").innerHTML = discripitionProduct[number];
+                            document.getElementById("h4Big").innerHTML = price[number]+"₪";
                             document.getElementById("logo").style.height = "110px";
                             document.getElementById("logo").style.marginTop = "-5px";
                             document.getElementById("logo").style.marginLeft = "75px";
@@ -1047,6 +1049,8 @@
                         document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
                         document.getElementById("h1Big").innerHTML = nameProduct[number];
                         document.getElementById("h2Big").innerHTML = sizeProduct[number];
+                        document.getElementById("h3Big").innerHTML = discripitionProduct[number];
+                        document.getElementById("h4Big").innerHTML = price[number]+"₪";
                         document.getElementById("logo").style.height = "110px";
                         document.getElementById("logo").style.marginTop = "-5px";
                         document.getElementById("logo").style.marginLeft = "75px";
@@ -1393,18 +1397,33 @@
                 </tr>
             </table>
         </div>
+
+
+
+
+
         <div id="imgWindow"
             style="position:absolute;left:1px;top:97px;z-index:30;display:none;width: 608px;height: 840px;border:solid;">
-            <h1 id="h1Big" style="text-align:center;"></h1>
-            <h2 id="h2Big" style="text-align:center;"></h2>
+            <div id="h1Big" style="text-align:center;font-size: xx-large;direction: rtl;"></div>
+            <div id="h2Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
+           
             <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src=""
-                style="width: 400px;height: 500px;position:absolute;left:100px;">
+                style="width: 400px;height: 500px;margin-left:100px;">
+                <div id="h3Big" style="text-align:center;font-size: medium;direction: rtl;"></div>
+                <div id="h4Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
+    
             <img onclick="closeWindow()"
                 style="width: 40px;height: 40px;position:absolute;left:3px;top:0px;cursor:pointer;" id="logoCBig"
                 src="https://i.im.ge/2022/06/25/urirb1.png">
             <div style="height:100px;width: 608px ;background-color: #f5b0de;position:absolute;left:-2px;top:838px;">
             </div>
         </div>
+
+
+
+
+
+
         <div id="tt" style="position:absolute;left:180px;top:300px;z-index:5;direction: rtl;width:400px ;"
             class="waviy">
             <span style="--i:1">מ</span>
