@@ -68,7 +68,19 @@
             margin: 0;
 
         }
+        .waviy2 {
+            position: relative;
+        }
 
+        .waviy2 span {
+            position: relative;
+            display: inline-block;
+            font-size: 14px;
+            color: #fff;
+            text-transform: uppercase;
+            animation: flip 3s infinite;
+            animation-delay: calc(-5s)
+        }
         .waviy {
             position: relative;
         }
@@ -142,6 +154,8 @@
             if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
                     document.getElementById("tt").style.marginTop = "-265px";
                     document.getElementById("tt").style.marginLeft = "20px";
+                    document.getElementById("tt").className = "waviy2";
+
 
                 document.getElementById("logo").style.height = "200px";
                 document.getElementById("header").style.height = "100px";
@@ -162,6 +176,7 @@
             }
 
             else {
+                document.getElementById("tt").className = "waviy";
                 document.getElementById("tt").style.marginTop = "0px";
                 document.getElementById("logo").style.height = "400px";
                 document.getElementById("header").style.height = "400px";
