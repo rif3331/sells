@@ -258,9 +258,9 @@
                 document.getElementById("logos").style.marginLeft = "-110px";
                 document.getElementById("w&m").style.display = "none";
                 document.getElementById("kinds").style.display = "none";
-              //  document.getElementById("ttikim").style.display = "none";
-               // document.getElementById("texso").style.display = "none";
-               // document.getElementById("tnalim").style.display = "none";
+                //  document.getElementById("ttikim").style.display = "none";
+                // document.getElementById("texso").style.display = "none";
+                // document.getElementById("tnalim").style.display = "none";
                 // document.getElementById("tbgadim").style.display = "none";
 
             }
@@ -1099,7 +1099,9 @@
             document.getElementById("side").style.height = tableProducts.offsetHeight + 250 + "px";
             //   alert(widthh - 390);
             document.getElementById("side").style.width = (widthh - 390) * 1.53 + "px";
-
+            if (tableProducts.rows.length == 0) {
+                alert("לא נמצאו פריטים");
+            }
 
         }
 
