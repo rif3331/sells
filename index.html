@@ -1236,6 +1236,12 @@
 
 
         }
+        function href()
+        {
+            alert("fsdsd");
+           window.location.href='whatsapp://send?text=היי &phone=+972502180883';
+        }
+
         function back() {
 
         }
@@ -1384,7 +1390,8 @@
 
 
     <div style="direction:ltr ;">
-        <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="200px" onmouseup="this.start();"
+        
+        <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="200px" onclick="href()"
             style="border: solid;position:absolute;left:295px;top:7px;z-index:6;font-size:12px;direction: ltr;">
             להעלאת מוצר לחץ כאן
         </marquee>
