@@ -205,7 +205,7 @@
                 document.getElementById("ttikim").style.display = "none";
                 document.getElementById("texso").style.display = "none";
                 document.getElementById("tnalim").style.display = "none";
-               // document.getElementById("tbgadim").style.display = "none";
+                // document.getElementById("tbgadim").style.display = "none";
 
             }
 
@@ -303,7 +303,7 @@
 
             }
         }
-       
+
         const aKind = new Array(
          /*/1/*/   "בגדים",
         /*/2/*/  "בגדים",
@@ -1038,8 +1038,9 @@
                 cell1.addEventListener("touchstart", startTouch, false);
                 cell1.addEventListener("touchmove", moveTouch, false);
 
-
             }
+          document.getElementById("side").style.height=tableProducts.offsetHeight+250+"px";
+
 
         }
 
@@ -1319,14 +1320,16 @@
 
 
     <div style="direction:ltr ;">
-        <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="605px" onmouseup="this.start();"
+        <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="auto" onmouseup="this.start();"
             style="border: solid;position:absolute;left:3px;top:0px;z-index:6;font-size:16px;direction: ltr;">מדריך
             לאתר: לפרטים על המוצר לחץ עליו | לתמונות נוספות החלק לצד | להגדלת תמונה לחץ לחיצה ארוכה | להעלאת מוצר שלח את
             הפריט (מחיר, תמונות, מידה, פירוט מוצר)
             ופרטים להתקשרות- טלפון, שם, אזור בארץ למספר 050-2180883
         </marquee>
     </div>
-
+    <div id="side"
+        style=" background-image: url('https://i.im.ge/2022/06/24/ur2CyG.jpg');width: 442px;height:1200px;z-index:12 ;position: absolute;right: 0px;">
+    </div>
 
 
 
