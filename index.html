@@ -822,8 +822,8 @@
 
 
         function displayProducts() {
-            let width = screen.width;
-alert(width);
+            let widthh = screen.width;
+
             var count = 0;
             var tableProducts = document.getElementById("displayProducts");
             for (var i = 0; i < imageUrl.length; i++) {
@@ -1041,6 +1041,8 @@ alert(width);
 
             }
           document.getElementById("side").style.height=tableProducts.offsetHeight+250+"px";
+
+          document.getElementById("side").style.width=widthh-920+"px";
 
 
         }
