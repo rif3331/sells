@@ -153,7 +153,7 @@
 
         function scrollFunction() {
             document.getElementById("logo").className = null;
-            if (document.body.scrollTop > 15 || document.documentElement.scrollTop > 15) {
+            if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
                 if (sinonWM == "wm") {
                     document.getElementById("tt").style.marginTop = "-265px";
                     document.getElementById("tt").style.marginLeft = "20px";
@@ -229,6 +229,25 @@
 
                     }
                 }
+                if (sinonWM != "wm" && sinonCSBE == "אקססוריז") {
+                    if (sinonWM == "w" || sinonWM == "m") {
+                        document.getElementById("tn").style.marginTop = "-265px";
+                        document.getElementById("tn").style.left = "527px";
+                        document.getElementById("tn").className = "waviy2";
+                        document.getElementById("texso").style.marginTop = "-265px";
+                        document.getElementById("texso").style.left = "465px";
+                        document.getElementById("texso").className = "waviy2";
+                    }
+                    if (sinonWM == "m") {
+                        document.getElementById("tg").style.marginTop = "-265px";
+                        document.getElementById("tg").style.left = "525px";
+                        document.getElementById("tg").className = "waviy2";
+                        document.getElementById("texso").style.marginTop = "-265px";
+                        document.getElementById("texso").style.left = "465px";
+                        document.getElementById("texso").className = "waviy2";
+
+                    }
+                }
 
                 document.getElementById("logo").style.height = "200px";
                 document.getElementById("header").style.height = "100px";
@@ -240,7 +259,7 @@
                 document.getElementById("w&m").style.display = "none";
                 document.getElementById("kinds").style.display = "none";
               //  document.getElementById("ttikim").style.display = "none";
-                document.getElementById("texso").style.display = "none";
+               // document.getElementById("texso").style.display = "none";
                // document.getElementById("tnalim").style.display = "none";
                 // document.getElementById("tbgadim").style.display = "none";
 
