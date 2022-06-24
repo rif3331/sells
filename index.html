@@ -880,7 +880,7 @@
 
 
         function displayProducts() {
-            
+
             let widthh = screen.width;
 
             var count = 0;
@@ -997,8 +997,7 @@
                 cell1.innerHTML += "<a style= font-size:12px>" + price[i] + "₪</a><br><br>";
 
                 cell1.onclick = function () {
-                    let myWindow;
-                    myWindow = window.open("", "", "width=600,height=400,left=600,top=200");
+
                     var content = this.innerHTML;
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
 
@@ -1015,6 +1014,9 @@
                         document.getElementById("text2" + number.toString()).innerHTML = "";
 
                     }
+                    document.getElementById("imgWindow").style.display = "inline";
+                    document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
+
 
 
                 }
@@ -1028,7 +1030,7 @@
                     //cell0.style.visibility = "hidden";
                 }
                 cell0.onclick = function () {
-                    
+
                     var content = this.innerHTML;
                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
                     var aImportentData = importentData.split('^');
@@ -1240,16 +1242,15 @@
 
 
         }
-        function href()
-        {
+        function href() {
 
-           window.location.href='whatsapp://send?text=היי אני מעוניין לעלות מוצר לאתר    שםפרטי:______________________ אזורבארץ:______________________ מספרטלפון:__________________ שםפריט:____________________ מידה:______________________ מחיר:______________________ תיאורפריט:______________________ יש להוסיף תמונות (עד 3)  &phone=+972502180883';
+            window.location.href = 'whatsapp://send?text=היי אני מעוניין לעלות מוצר לאתר    שםפרטי:______________________ אזורבארץ:______________________ מספרטלפון:__________________ שםפריט:____________________ מידה:______________________ מחיר:______________________ תיאורפריט:______________________ יש להוסיף תמונות (עד 3)  &phone=+972502180883';
         }
 
         function back() {
 
         }
-        
+
     </script>
 
 </head>
@@ -1394,7 +1395,7 @@
 
 
     <div style="direction:ltr ;">
-        
+
         <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="200px" onclick="href()"
             style="border: solid;position:absolute;left:295px;top:7px;z-index:6;font-size:12px;direction: ltr;cursor:pointer;">
             להעלאת מוצר לחץ כאן
@@ -1404,6 +1405,9 @@
         style=" background-image: url('https://i.im.ge/2022/06/24/ur2CyG.jpg');width:3%;height:1200px;z-index:12 ;position: absolute;right: 0px;">
     </div>
 
+    <div id="imgWindow"style="position:absolute;left:200px;top:200px;z-index:30;display:none;width: 800px;height: 800px;">
+        <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src="" style="width: 400px;height: 400px;">
+    </div>
 
 
 </body>
