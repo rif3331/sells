@@ -1050,6 +1050,11 @@
                     }
                     else {
                         document.getElementById("imgWindow").style.display = "inline";
+                        setTimeout(function () {
+                            document.getElementById("imgBig").className = null;
+                        }, 500);
+                        document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
+                        document.getElementById("imgBig").className = "w3-container w3-center w3-animate-zoom";
                         tableProducts.style.opacity = 0.05;
                         document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
                         document.getElementById("h1Big").innerHTML = nameProduct[number];
