@@ -149,6 +149,7 @@
 
         var sinonWM = "wm";
         var sinonCSBE = "csbe";
+
         // When the user scrolls down 50px from the top of the document, resize the header's font size
         window.onscroll = function () { scrollFunction() };
 
@@ -1145,7 +1146,22 @@
             document.getElementById("side").style.width = (widthh - 390) * 1.53 + "px";
             if (tableProducts.rows.length == 0) {
                 alert("לא נמצאו פריטים");
-                home();
+                sinonCSBE = "csbe";
+                dealteTable("displayProducts");
+                displayProducts();
+                document.getElementById("shows").style.opacity = "1";
+                document.getElementById("bags").style.opacity = "1";
+                document.getElementById("cloths").style.opacity = "1";
+                document.getElementById("exsasoriz").style.opacity = "1";
+                document.getElementById("ttikim").style.display = "none";
+                document.getElementById("texso").style.display = "none";
+                document.getElementById("tnalim").style.display = "none";
+                document.getElementById("tbgadim").style.display = "none";
+
+
+
+
+
             }
 
         }
@@ -1168,11 +1184,15 @@
         function cloths() {
             dealteTable("displayProducts");
             sinonCSBE = "בגדים";
-            document.getElementById("shows").style.display = "none";
-            document.getElementById("bags").style.display = "none";
+            document.getElementById("shows").style.opacity = "0.2";
+            document.getElementById("bags").style.opacity = "0.2";
+            document.getElementById("exsasoriz").style.opacity = "0.2";
             document.getElementById("cloths").style.display = "inline";
-            document.getElementById("exsasoriz").style.display = "none";
             document.getElementById("tbgadim").style.display = "inline";
+            document.getElementById("ttikim").style.display = "none";
+            document.getElementById("texso").style.display = "none";
+            document.getElementById("tnalim").style.display = "none";
+
 
             if (sinonWM == "w") {
                 document.getElementById("tbgadim").style.marginLeft = "-35px";
@@ -1186,10 +1206,14 @@
             dealteTable("displayProducts");
             sinonCSBE = "נעליים";
             document.getElementById("shows").style.display = "inline";
-            document.getElementById("bags").style.display = "none";
-            document.getElementById("cloths").style.display = "none";
-            document.getElementById("exsasoriz").style.display = "none";
+            document.getElementById("bags").style.opacity = "0.2";
+            document.getElementById("cloths").style.opacity = "0.2";
+            document.getElementById("exsasoriz").style.opacity = "0.2";
             document.getElementById("tnalim").style.display = "inline";
+            document.getElementById("ttikim").style.display = "none";
+            document.getElementById("texso").style.display = "none";
+
+            document.getElementById("tbgadim").style.display = "none";
             if (sinonWM == "w") {
                 document.getElementById("tnalim").style.marginLeft = "-44px";
             }
@@ -1202,11 +1226,15 @@
         function exsasoriz() {
             dealteTable("displayProducts");
             sinonCSBE = "אקססוריז";
-            document.getElementById("shows").style.display = "none";
-            document.getElementById("bags").style.display = "none";
-            document.getElementById("cloths").style.display = "none";
+            document.getElementById("shows").style.opacity = "0.2";
+            document.getElementById("bags").style.opacity = "0.2";
+            document.getElementById("cloths").style.opacity = "0.2";
             document.getElementById("exsasoriz").style.display = "inline";
             document.getElementById("texso").style.display = "inline";
+            document.getElementById("ttikim").style.display = "none";
+
+            document.getElementById("tnalim").style.display = "none";
+            document.getElementById("tbgadim").style.display = "none";
             if (sinonWM == "w") {
                 document.getElementById("texso").style.marginLeft = "-100px";
             }
@@ -1218,11 +1246,15 @@
         function bags() {
             dealteTable("displayProducts");
             sinonCSBE = "תיקים";
-            document.getElementById("shows").style.display = "none";
+            document.getElementById("shows").style.opacity = "0.2";
             document.getElementById("bags").style.display = "inline";
-            document.getElementById("cloths").style.display = "none";
-            document.getElementById("exsasoriz").style.display = "none";
+            document.getElementById("cloths").style.opacity = "0.2";
+            document.getElementById("exsasoriz").style.opacity = "0.2";
             document.getElementById("ttikim").style.display = "inline";
+
+            document.getElementById("texso").style.display = "none";
+            document.getElementById("tnalim").style.display = "none";
+            document.getElementById("tbgadim").style.display = "none";
             if (sinonWM == "w") {
                 document.getElementById("ttikim").style.marginLeft = "-36px";
             }
@@ -1273,6 +1305,10 @@
                 document.getElementById("exsasoriz").style.display = "inline";
                 document.getElementById("w&m").style.display = "inline";
                 document.getElementById("kinds").style.display = "none";
+                document.getElementById("shows").style.opacity = "1";
+                document.getElementById("bags").style.opacity = "1";
+                document.getElementById("cloths").style.opacity = "1";
+                document.getElementById("exsasoriz").style.opacity = "1";
                 displayProducts();
             }, 100);
 
@@ -1295,9 +1331,7 @@
             document.getElementById("logo1").style.width = "36px";
 
         }
-        function back() {
-
-        }
+       
 
     </script>
 
@@ -1340,12 +1374,10 @@
                             role="button">תיקים</button></td>
                     <td> <button onclick="exsasoriz()" id="exsasoriz" style="width:auto;" class="button-28"
                             role="button">אקססוריז</button></td>
-                    <td><img id='back' onclick="back()"
-                            style='width:60px;height:29px;position:relative;top:2px;cursor:pointer;'
-                            src='https://i.im.ge/2022/06/24/uru1rz.png'></td>
+              
                     <td><img id='home' onclick="home()"
-                            style='width:36px;height:39px;position:relative;top:2px;cursor:pointer;'
-                            src='https://i.im.ge/2022/06/23/ulmJMK.png'></td>
+                        style='width:60px;height:29px;position:relative;top:2px;cursor:pointer;'
+                            src='https://i.im.ge/2022/06/24/uru1rz.png'></td>
                 </tr>
             </table>
         </div>
