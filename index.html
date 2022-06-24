@@ -154,6 +154,13 @@
         function scrollFunction() {
             document.getElementById("logo").className = null;
             if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+                document.getElementById("displayProducts").style.opacity = "1";
+                document.getElementById("imgWindow").style.display = "none";
+                document.getElementById("logo").style.marginLeft = "0px";
+                document.getElementById("logo2").style.display = "inline";
+                document.getElementById("logo3").style.display = "inline";
+                document.getElementById("logo1").style.width = "36px";
+
                 if (sinonWM == "wm") {
                     document.getElementById("tt").style.marginTop = "-265px";
                     document.getElementById("tt").style.marginLeft = "20px";
@@ -248,7 +255,6 @@
 
                     }
                 }
-
                 document.getElementById("logo").style.height = "200px";
                 document.getElementById("header").style.height = "100px";
                 document.getElementById("header").style.paddingLeft = "150px";
@@ -1002,20 +1008,48 @@
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
 
                     if (document.getElementById("text" + number.toString()).innerHTML == "" || document.getElementById("text" + number.toString()).innerHTML == null) {
-                      //  document.getElementById("text" + number.toString()).style.fontSize = "10px";
-                      //  document.getElementById("products" + number.toString()).style.opacity = "0.2";
-                      //  document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px;margin-top:50px' >" + discripitionProduct[number] + "</div>";
-                      //  document.getElementById("text2" + number.toString()).innerHTML = "<div style='position:absolute;text-align:center;width:200px;margin-top:-41px;margin-right:3px;font-size:10px'><a href='whatsapp://send?text=היי " + areaMen[number].slice(1, areaMen[number].indexOf(",")) + ", רציתי לברר על ה" + nameProduct[number] + "&phone=" + phoneMen[number] + "'>שליחת הודעה " + areaMen[number] + "</a></div>";
+                        //  document.getElementById("text" + number.toString()).style.fontSize = "10px";
+                        //  document.getElementById("products" + number.toString()).style.opacity = "0.2";
+                        //  document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px;margin-top:50px' >" + discripitionProduct[number] + "</div>";
+                        //  document.getElementById("text2" + number.toString()).innerHTML = "<div style='position:absolute;text-align:center;width:200px;margin-top:-41px;margin-right:3px;font-size:10px'><a href='whatsapp://send?text=היי " + areaMen[number].slice(1, areaMen[number].indexOf(",")) + ", רציתי לברר על ה" + nameProduct[number] + "&phone=" + phoneMen[number] + "'>שליחת הודעה " + areaMen[number] + "</a></div>";
 
                     }
                     else {
-                      //  document.getElementById("products" + number.toString()).style.opacity = "1";
-                      //  document.getElementById("text" + number.toString()).innerHTML = "";
-                       // document.getElementById("text2" + number.toString()).innerHTML = "";
+                        //  document.getElementById("products" + number.toString()).style.opacity = "1";
+                        //  document.getElementById("text" + number.toString()).innerHTML = "";
+                        // document.getElementById("text2" + number.toString()).innerHTML = "";
 
                     }
-                    document.getElementById("imgWindow").style.display = "inline";
-                    document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
+                    if (document.documentElement.scrollTop == 0) {
+                        setTimeout(function () {
+                            document.getElementById("imgWindow").style.display = "inline";
+                            tableProducts.style.opacity = 0.05;
+                            document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
+                            document.getElementById("logo").style.height = "110px";
+                            document.getElementById("logo").style.marginTop = "-5px";
+                            document.getElementById("logo").style.marginLeft = "75px";
+                            document.getElementById("logos").style.marginTop = "-77px";
+                            document.getElementById("logos").style.marginLeft = "-110px";
+                            document.getElementById("logo2").style.display = "none";
+                            document.getElementById("logo3").style.display = "none";
+                            document.getElementById("logo1").style.width = "100px";
+                        }, 50);
+                        window.scrollTo(0, 70);
+                    }
+                    else {
+                        document.getElementById("imgWindow").style.display = "inline";
+                        tableProducts.style.opacity = 0.05;
+                        document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
+                        document.getElementById("logo").style.height = "110px";
+                        document.getElementById("logo").style.marginTop = "-5px";
+                        document.getElementById("logo").style.marginLeft = "75px";
+                        document.getElementById("logos").style.marginTop = "-77px";
+                        document.getElementById("logos").style.marginLeft = "-110px";
+                        document.getElementById("logo2").style.display = "none";
+                        document.getElementById("logo3").style.display = "none";
+                        document.getElementById("logo1").style.width = "100px";
+                    }
+
 
 
 
@@ -1246,9 +1280,18 @@
 
             window.location.href = 'whatsapp://send?text=היי אני מעוניין לעלות מוצר לאתר    שםפרטי:______________________ אזורבארץ:______________________ מספרטלפון:__________________ שםפריט:____________________ מידה:______________________ מחיר:______________________ תיאורפריט:______________________ יש להוסיף תמונות (עד 3)  &phone=+972502180883';
         }
-        
+
         function closeWindow() {
+            document.getElementById("displayProducts").style.opacity = "1";
             document.getElementById("imgWindow").style.display = "none";
+            document.getElementById("logo").style.marginLeft = "0px";
+            document.getElementById("logo").style.height = "200px";
+            document.getElementById("logos").style.marginTop = "-170px";
+            document.getElementById("logos").style.marginLeft = "-110px";
+            document.getElementById("logo2").style.display = "inline";
+            document.getElementById("logo3").style.display = "inline";
+            document.getElementById("logo1").style.width = "36px";
+
         }
         function back() {
 
@@ -1305,12 +1348,12 @@
             </table>
         </div>
         <div id="imgWindow"
-            style="position:absolute;left:1px;top:140px;z-index:30;display:none;width: 608px;height: 1027px;border:solid;background-image:url(https://i.im.ge/2022/06/25/urhGHD.jpg);">
-            <img style="width: 400px;height: 200px;position:absolute;left:100px;top:0px;" class="w3-container w3-center w3-animate-zoom" id="logoBig"
-                src="https://i.im.ge/2022/06/18/rGzVi1.png">
+            style="position:absolute;left:1px;top:97px;z-index:30;display:none;width: 608px;height: 1027px;border:solid;">
+
             <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src="" style="width: 600px;height: 400px;">
-            <img onclick="closeWindow()" style="width: 40px;height: 40px;position:absolute;left:3px;top:0px;cursor:pointer;"
-                id="logoCBig" src="https://i.im.ge/2022/06/25/urirb1.png">
+            <img onclick="closeWindow()"
+                style="width: 40px;height: 40px;position:absolute;left:3px;top:0px;cursor:pointer;" id="logoCBig"
+                src="https://i.im.ge/2022/06/25/urirb1.png">
 
         </div>
         <div id="tt" style="position:absolute;left:180px;top:300px;z-index:5;direction: rtl;width:400px ;"
