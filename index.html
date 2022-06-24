@@ -880,6 +880,7 @@
 
 
         function displayProducts() {
+            
             let widthh = screen.width;
 
             var count = 0;
@@ -996,6 +997,8 @@
                 cell1.innerHTML += "<a style= font-size:12px>" + price[i] + "₪</a><br><br>";
 
                 cell1.onclick = function () {
+                    let myWindow;
+                    myWindow = window.open("", "", "width=600,height=400,left=600,top=200");
                     var content = this.innerHTML;
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
 
@@ -1025,6 +1028,7 @@
                     //cell0.style.visibility = "hidden";
                 }
                 cell0.onclick = function () {
+                    
                     var content = this.innerHTML;
                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
                     var aImportentData = importentData.split('^');
@@ -1245,12 +1249,12 @@
         function back() {
 
         }
+        
     </script>
 
 </head>
 
 <body style="zoom:64% ;" id="body" onload="displayProducts()">
-
     <div style="z-index:2;" id="header">
         <img class="w3-container w3-center w3-animate-zoom" id="logo" src="https://i.im.ge/2022/06/18/rGzVi1.png">
         <table id="logos" style="margin-top:-400px;margin-left:170px;">
