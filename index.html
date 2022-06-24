@@ -1002,16 +1002,16 @@
                     var number = content.slice(content.indexOf("products") + 8, content.indexOf('" src'));
 
                     if (document.getElementById("text" + number.toString()).innerHTML == "" || document.getElementById("text" + number.toString()).innerHTML == null) {
-                        document.getElementById("text" + number.toString()).style.fontSize = "10px";
-                        document.getElementById("products" + number.toString()).style.opacity = "0.2";
-                        document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px;margin-top:50px' >" + discripitionProduct[number] + "</div>";
-                        document.getElementById("text2" + number.toString()).innerHTML = "<div style='position:absolute;text-align:center;width:200px;margin-top:-41px;margin-right:3px;font-size:10px'><a href='whatsapp://send?text=היי " + areaMen[number].slice(1, areaMen[number].indexOf(",")) + ", רציתי לברר על ה" + nameProduct[number] + "&phone=" + phoneMen[number] + "'>שליחת הודעה " + areaMen[number] + "</a></div>";
+                      //  document.getElementById("text" + number.toString()).style.fontSize = "10px";
+                      //  document.getElementById("products" + number.toString()).style.opacity = "0.2";
+                      //  document.getElementById("text" + number.toString()).innerHTML += "<div class='w3-container w3-center w3-animate-zoom' style='position:absolute;text-align:center;width:200px;margin-top:50px' >" + discripitionProduct[number] + "</div>";
+                      //  document.getElementById("text2" + number.toString()).innerHTML = "<div style='position:absolute;text-align:center;width:200px;margin-top:-41px;margin-right:3px;font-size:10px'><a href='whatsapp://send?text=היי " + areaMen[number].slice(1, areaMen[number].indexOf(",")) + ", רציתי לברר על ה" + nameProduct[number] + "&phone=" + phoneMen[number] + "'>שליחת הודעה " + areaMen[number] + "</a></div>";
 
                     }
                     else {
-                        document.getElementById("products" + number.toString()).style.opacity = "1";
-                        document.getElementById("text" + number.toString()).innerHTML = "";
-                        document.getElementById("text2" + number.toString()).innerHTML = "";
+                      //  document.getElementById("products" + number.toString()).style.opacity = "1";
+                      //  document.getElementById("text" + number.toString()).innerHTML = "";
+                       // document.getElementById("text2" + number.toString()).innerHTML = "";
 
                     }
                     document.getElementById("imgWindow").style.display = "inline";
@@ -1246,7 +1246,10 @@
 
             window.location.href = 'whatsapp://send?text=היי אני מעוניין לעלות מוצר לאתר    שםפרטי:______________________ אזורבארץ:______________________ מספרטלפון:__________________ שםפריט:____________________ מידה:______________________ מחיר:______________________ תיאורפריט:______________________ יש להוסיף תמונות (עד 3)  &phone=+972502180883';
         }
-
+        
+        function closeWindow() {
+            document.getElementById("imgWindow").style.display = "none";
+        }
         function back() {
 
         }
@@ -1300,6 +1303,15 @@
                             src='https://i.im.ge/2022/06/23/ulmJMK.png'></td>
                 </tr>
             </table>
+        </div>
+        <div id="imgWindow"
+            style="position:absolute;left:3px;top:0px;z-index:30;display:none;width: 610px;height: 1027px;border:solid;background-image:url(https://i.im.ge/2022/06/25/urhGHD.jpg);">
+            <img style="width: 600px;height: 200px;" class="w3-container w3-center w3-animate-zoom" id="logoBig"
+                src="https://i.im.ge/2022/06/18/rGzVi1.png">
+            <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src="" style="width: 600px;height: 400px;">
+            <img onclick="closeWindow()" style="width: 40px;height: 40px;position:absolute;left:3px;top:0px;cursor:pointer;"
+                id="logoCBig" src="https://i.im.ge/2022/06/25/urirb1.png">
+
         </div>
         <div id="tt" style="position:absolute;left:180px;top:300px;z-index:5;direction: rtl;width:400px ;"
             class="waviy">
@@ -1405,9 +1417,7 @@
         style=" background-image: url('https://i.im.ge/2022/06/24/ur2CyG.jpg');width:3%;height:1200px;z-index:12 ;position: absolute;right: 0px;">
     </div>
 
-    <div id="imgWindow"style="position:absolute;left:200px;top:200px;z-index:30;display:none;width: 800px;height: 800px;">
-        <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src="" style="width: 400px;height: 400px;">
-    </div>
+
 
 
 </body>
