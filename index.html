@@ -152,6 +152,10 @@
                 document.getElementById("tn").style.display = "none";
                 document.getElementById("tg").style.display = "none";
                 document.getElementById("kinds").style.display = "none";
+                document.getElementById("ttikim").style.display = "none";
+                document.getElementById("texso").style.display = "none";
+                document.getElementById("tnalim").style.display = "none";
+                document.getElementById("tbgadim").style.display = "none";
 
             }
 
@@ -170,6 +174,7 @@
                     document.getElementById("tn").style.display = "none";
                     document.getElementById("tg").style.display = "none";
                     document.getElementById("tt").style.display = "inline";
+                    
 
 
                 }
@@ -184,10 +189,38 @@
                     document.getElementById("tg").style.display = "inline";
                     document.getElementById("tn").style.display = "none";
                     document.getElementById("kinds").style.display = "inline";
-
                 }
 
-
+                if (sinonCSBE == "csbe") {
+                    document.getElementById("ttikim").style.display = "none";
+                    document.getElementById("texso").style.display = "none";
+                    document.getElementById("tnalim").style.display = "none";
+                    document.getElementById("tbgadim").style.display = "none";
+                }
+                if (sinonCSBE == "בגדים") {
+                    document.getElementById("ttikim").style.display = "none";
+                    document.getElementById("texso").style.display = "none";
+                    document.getElementById("tnalim").style.display = "none";
+                    document.getElementById("tbgadim").style.display = "inline";
+                }
+                if (sinonCSBE == "נעליים") {
+                    document.getElementById("ttikim").style.display = "none";
+                    document.getElementById("texso").style.display = "none";
+                    document.getElementById("tnalim").style.display = "inline";
+                    document.getElementById("tbgadim").style.display = "none";
+                }
+                if (sinonCSBE == "תיקים") {
+                    document.getElementById("ttikim").style.display = "inline";
+                    document.getElementById("texso").style.display = "none";
+                    document.getElementById("tnalim").style.display = "none";
+                    document.getElementById("tbgadim").style.display = "none";
+                }
+                if (sinonCSBE == "אקססוריז") {
+                    document.getElementById("ttikim").style.display = "none";
+                    document.getElementById("texso").style.display = "inline";
+                    document.getElementById("tnalim").style.display = "none";
+                    document.getElementById("tbgadim").style.display = "none";
+                }
 
 
 
