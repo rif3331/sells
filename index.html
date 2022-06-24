@@ -68,6 +68,7 @@
             margin: 0;
 
         }
+
         .waviy2 {
             position: relative;
         }
@@ -81,6 +82,7 @@
             animation: flip 3s infinite;
             animation-delay: calc(-5s)
         }
+
         .waviy {
             position: relative;
         }
@@ -152,10 +154,24 @@
         function scrollFunction() {
             document.getElementById("logo").className = null;
             if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+                if (sinonWM == "wm") {
                     document.getElementById("tt").style.marginTop = "-265px";
                     document.getElementById("tt").style.marginLeft = "20px";
                     document.getElementById("tt").className = "waviy2";
-
+                }
+                else {
+                    document.getElementById("tt").style.display = "none";
+                }
+                if (sinonWM != "wm" && sinonCSBE == "csbe") {
+                    if (sinonWM == "w") {
+                        document.getElementById("tn").style.marginTop = "-265px";
+                    document.getElementById("tn").style.marginLeft = "20px";
+                    }
+                    if (sinonWM == "m") {
+                        document.getElementById("tg").style.marginTop = "-265px";
+                    document.getElementById("tg").style.marginLeft = "20px";
+                    }
+                }
 
                 document.getElementById("logo").style.height = "200px";
                 document.getElementById("header").style.height = "100px";
@@ -165,7 +181,6 @@
                 document.getElementById("logos").style.marginTop = "-170px";
                 document.getElementById("logos").style.marginLeft = "-110px";
                 document.getElementById("w&m").style.display = "none";
-                document.getElementById("tn").style.display = "none";
                 document.getElementById("tg").style.display = "none";
                 document.getElementById("kinds").style.display = "none";
                 document.getElementById("ttikim").style.display = "none";
@@ -178,6 +193,20 @@
             else {
                 document.getElementById("tt").className = "waviy";
                 document.getElementById("tt").style.marginTop = "0px";
+                document.getElementById("tn").className = "waviy";
+                document.getElementById("tn").style.marginTop = "0px";
+                document.getElementById("tg").className = "waviy";
+                document.getElementById("tg").style.marginTop = "0px";
+
+                document.getElementById("ttikim").className = "waviy";
+                document.getElementById("ttikim").style.marginTop = "0px";
+                document.getElementById("texso").className = "waviy";
+                document.getElementById("texso").style.marginTop = "0px";
+                document.getElementById("tnalim").className = "waviy";
+                document.getElementById("tnalim").style.marginTop = "0px";
+                document.getElementById("tbgadim").className = "waviy";
+                document.getElementById("tbgadim").style.marginTop = "0px";
+
                 document.getElementById("logo").style.height = "400px";
                 document.getElementById("header").style.height = "400px";
                 document.getElementById("header").style.left = "0%";
@@ -192,7 +221,7 @@
                     document.getElementById("tn").style.display = "none";
                     document.getElementById("tg").style.display = "none";
                     document.getElementById("tt").style.display = "inline";
-                    
+
 
 
                 }
@@ -956,7 +985,8 @@
                 </tr>
             </table>
         </div>
-        <div id="tt" style="position:absolute;left:180px;top:300px;z-index:5;direction: rtl;width:400px ;" class="waviy">
+        <div id="tt" style="position:absolute;left:180px;top:300px;z-index:5;direction: rtl;width:400px ;"
+            class="waviy">
             <span style="--i:1">מ</span>
             <span style="--i:2">כ</span>
             <span style="--i:3">י</span>
@@ -972,6 +1002,60 @@
             <span style="--i:13">י</span>
             <span style="--i:14">י</span>
             <span style="--i:15">ה</span>
+        </div>
+        <div id="tg" style="position:absolute;left:500px;top:300px;z-index:10;direction: rtl;display: none;" class="waviy">
+            <span style="--i:1">ג</span>
+            <span style="--i:2">ב</span>
+            <span style="--i:3">ר</span>
+            <span style="--i:4">י</span>
+            <span style="--i:5">ם</span>
+        </div>
+        <div id="tn" style="position:absolute;left:510px;top:300px;z-index:10;direction: rtl;display: none;" class="waviy">
+            <span style="--i:1">נ</span>
+            <span style="--i:2">ש</span>
+            <span style="--i:3">י</span>
+            <span style="--i:4">ם</span>
+        </div>
+        <div id="ttikim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+            class="waviy">
+            <span style="--i:1">←</span>
+            <span style="--i:2">ת</span>
+            <span style="--i:3">י</span>
+            <span style="--i:4">ק</span>
+            <span style="--i:5">י</span>
+            <span style="--i:6">ם</span>
+        </div>
+        <div id="tbgadim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+            class="waviy">
+            <span style="--i:1">←</span>
+            <span style="--i:2">ב</span>
+            <span style="--i:3">ג</span>
+            <span style="--i:4">ד</span>
+            <span style="--i:5">י</span>
+            <span style="--i:6">ם</span>
+        </div>
+        <div id="tnalim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+            class="waviy">
+            <span style="--i:1">←</span>
+            <span style="--i:2">נ</span>
+            <span style="--i:3">ע</span>
+            <span style="--i:4">ל</span>
+            <span style="--i:5">י</span>
+            <span style="--i:6">י</span>
+            <span style="--i:7">ם</span>
+        </div>
+        <div id="texso" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+            class="waviy">
+            <span style="--i:1">←</span>
+            <span style="--i:2">א</span>
+            <span style="--i:3">ק</span>
+            <span style="--i:4">ס</span>
+            <span style="--i:5">ס</span>
+            <span style="--i:6">ו</span>
+            <span style="--i:7">ר</span>
+            <span style="--i:8">י</span>
+            <span style="--i:9">ז</span>
+    
         </div>
     </div>
 
@@ -991,7 +1075,7 @@
 
 
 
-   
+
     <div style="direction:ltr ;">
         <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="auto" onmouseup="this.start();"
             style="border: solid;position:absolute;left:3px;top:0px;z-index:6;font-size:16px;direction: ltr;">מדריך
@@ -1000,60 +1084,7 @@
             ופרטים להתקשרות- טלפון, שם, אזור בארץ למספר 050-2180883
         </marquee>
     </div>
-    <div id="tg" style="position:absolute;left:500px;top:300px;z-index:10;direction: rtl;display: none;" class="waviy">
-        <span style="--i:1">ג</span>
-        <span style="--i:2">ב</span>
-        <span style="--i:3">ר</span>
-        <span style="--i:4">י</span>
-        <span style="--i:5">ם</span>
-    </div>
-    <div id="tn" style="position:absolute;left:510px;top:300px;z-index:10;direction: rtl;display: none;" class="waviy">
-        <span style="--i:1">נ</span>
-        <span style="--i:2">ש</span>
-        <span style="--i:3">י</span>
-        <span style="--i:4">ם</span>
-    </div>
-    <div id="ttikim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
-        class="waviy">
-        <span style="--i:1">←</span>
-        <span style="--i:2">ת</span>
-        <span style="--i:3">י</span>
-        <span style="--i:4">ק</span>
-        <span style="--i:5">י</span>
-        <span style="--i:6">ם</span>
-    </div>
-    <div id="tbgadim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
-        class="waviy">
-        <span style="--i:1">←</span>
-        <span style="--i:2">ב</span>
-        <span style="--i:3">ג</span>
-        <span style="--i:4">ד</span>
-        <span style="--i:5">י</span>
-        <span style="--i:6">ם</span>
-    </div>
-    <div id="tnalim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
-        class="waviy">
-        <span style="--i:1">←</span>
-        <span style="--i:2">נ</span>
-        <span style="--i:3">ע</span>
-        <span style="--i:4">ל</span>
-        <span style="--i:5">י</span>
-        <span style="--i:6">י</span>
-        <span style="--i:7">ם</span>
-    </div>
-    <div id="texso" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
-        class="waviy">
-        <span style="--i:1">←</span>
-        <span style="--i:2">א</span>
-        <span style="--i:3">ק</span>
-        <span style="--i:4">ס</span>
-        <span style="--i:5">ס</span>
-        <span style="--i:6">ו</span>
-        <span style="--i:7">ר</span>
-        <span style="--i:8">י</span>
-        <span style="--i:9">ז</span>
-
-    </div>
+   
 
 
 
