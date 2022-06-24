@@ -164,14 +164,19 @@
                 document.getElementById("line").style.display = "inline";
                 document.getElementById("tt").style.display = "inline";
                 document.getElementById("logos").style.marginTop = "-140px";
-                document.getElementById("logos").style.marginLeft = "10px";
+                document.getElementById("logos").style.marginLeft = "0px";
                 document.getElementById("tn").style.display = "inline";
                 document.getElementById("tg").style.display = "inline";
 
                 if (sinonWM == "wm") {
                     document.getElementById("w&m").style.display = "inline";
                 }
-                else {
+                else if  (sinonWM == "w") {
+                    document.getElementById("tn").style.display = "inline";
+                    document.getElementById("kinds").style.display = "inline";
+                }
+                else if (sinonWM == "m") {
+                    document.getElementById("tg").style.display = "inline";
                     document.getElementById("kinds").style.display = "inline";
 
                 }
