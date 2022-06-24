@@ -173,7 +173,7 @@
 
 
                 }
-                else if  (sinonWM == "w") {
+                else if (sinonWM == "w") {
                     document.getElementById("tn").style.display = "inline";
                     document.getElementById("tg").style.display = "none";
                     document.getElementById("tt").style.display = "none";
@@ -745,6 +745,14 @@
             document.getElementById("bags").style.display = "none";
             document.getElementById("cloths").style.display = "inline";
             document.getElementById("exsasoriz").style.display = "none";
+            document.getElementById("tbgadim").style.display = "inline";
+
+            if (sinonWM == "w") {
+                document.getElementById("tbgadim").style.marginLeft = "0px";
+            }
+            if (sinonWM == "m") {
+                document.getElementById("tbgadim").style.marginLeft = "-9px";
+            }
             displayProducts();
         }
         function shows() {
@@ -754,6 +762,14 @@
             document.getElementById("bags").style.display = "none";
             document.getElementById("cloths").style.display = "none";
             document.getElementById("exsasoriz").style.display = "none";
+            document.getElementById("tnalim").style.display = "inline";
+            if (sinonWM == "w") {
+                document.getElementById("tnalim").style.marginLeft = "-9px";
+            }
+            if (sinonWM == "m") {
+                document.getElementById("tnalim").style.marginLeft = "-18px";
+            }
+
             displayProducts();
         }
         function exsasoriz() {
@@ -763,7 +779,13 @@
             document.getElementById("bags").style.display = "none";
             document.getElementById("cloths").style.display = "none";
             document.getElementById("exsasoriz").style.display = "inline";
-
+            document.getElementById("texso").style.display = "inline";
+            if (sinonWM == "w") {
+                document.getElementById("texso").style.marginLeft = "-45px";
+            }
+            if (sinonWM == "m") {
+                document.getElementById("texso").style.marginLeft = "-54px";
+            }
             displayProducts();
         }
         function bags() {
@@ -773,6 +795,13 @@
             document.getElementById("bags").style.display = "inline";
             document.getElementById("cloths").style.display = "none";
             document.getElementById("exsasoriz").style.display = "none";
+            document.getElementById("ttikim").style.display = "inline";
+            if (sinonWM == "w") {
+                document.getElementById("ttikim").style.marginLeft = "-1px";
+            }
+            if (sinonWM == "m") {
+                document.getElementById("ttikim").style.marginLeft = "-10px";
+            }
             displayProducts();
         }
         function women() {
@@ -804,6 +833,10 @@
             setTimeout(function () {
                 document.getElementById("w&m").className = "w3-container w3-center w3-animate-zoom";
                 document.getElementById("kinds").className = "w3-container w3-center w3-animate-zoom";
+                document.getElementById("ttikim").style.display = "none";
+                document.getElementById("texso").style.display = "none";
+                document.getElementById("tnalim").style.display = "none";
+                document.getElementById("tbgadim").style.display = "none";
                 document.getElementById("tn").style.display = "none";
                 document.getElementById("tg").style.display = "none";
                 document.getElementById("tt").style.display = "inline";
@@ -921,6 +954,47 @@
         <span style="--i:2">ש</span>
         <span style="--i:3">י</span>
         <span style="--i:4">ם</span>
+    </div>
+    <div id="ttikim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+        class="waviy">
+        <span style="--i:1">←</span>
+        <span style="--i:2">ת</span>
+        <span style="--i:3">י</span>
+        <span style="--i:4">ק</span>
+        <span style="--i:5">י</span>
+        <span style="--i:6">ם</span>
+    </div>
+    <div id="tbgadim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+        class="waviy">
+        <span style="--i:1">←</span>
+        <span style="--i:2">ב</span>
+        <span style="--i:3">ג</span>
+        <span style="--i:4">ד</span>
+        <span style="--i:5">י</span>
+        <span style="--i:6">ם</span>
+    </div>
+    <div id="tnalim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+        class="waviy">
+        <span style="--i:1">←</span>
+        <span style="--i:2">נ</span>
+        <span style="--i:3">ע</span>
+        <span style="--i:4">ל</span>
+        <span style="--i:5">י</span>
+        <span style="--i:6">י</span>
+        <span style="--i:7">ם</span>
+    </div>
+    <div id="texso" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+        class="waviy">
+        <span style="--i:1">←</span>
+        <span style="--i:2">א</span>
+        <span style="--i:3">ק</span>
+        <span style="--i:4">ס</span>
+        <span style="--i:5">ס</span>
+        <span style="--i:6">ו</span>
+        <span style="--i:7">ר</span>
+        <span style="--i:8">י</span>
+        <span style="--i:9">ז</span>
+
     </div>
 
 
