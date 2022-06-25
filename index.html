@@ -705,6 +705,102 @@
 
 
         );
+
+
+
+
+        function startTouch3(e) {
+            initialX = e.touches[0].clientX;
+            initialY = e.touches[0].clientY;
+        };
+
+        function moveTouch3(e) {
+
+            if (initialX === null) {
+                return;
+            }
+
+            if (initialY === null) {
+                return;
+            }
+
+            var currentX = e.touches[0].clientX;
+            var currentY = e.touches[0].clientY;
+
+            var diffX = initialX - currentX;
+            var diffY = initialY - currentY;
+
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                // sliding horizontally
+                if (diffX > 0) {
+                    // swiped left
+               
+                }
+                else {
+                    // swiped right
+                }
+
+
+            }
+            else {
+                // sliding vertically
+                if (diffY > 0) {
+                    // swiped up
+                    document.getElementById("pointsTable").innerHTML = "<table 'id='pointsTable'></table>";
+                    document.getElementById("displayProducts").style.opacity = "1";
+                    document.getElementById("imgWindow").style.display = "none";
+                    document.getElementById("logo").style.marginLeft = "0px";
+                    document.getElementById("logo2").style.display = "inline";
+                    document.getElementById("logo3").style.display = "inline";
+                    document.getElementById("logo1").style.width = "36px";
+                    Window.scroll();
+                    // alert("swiped up");
+                } else {
+                    // swiped down
+                    document.getElementById("pointsTable").innerHTML = "<table 'id='pointsTable'></table>";
+                    document.getElementById("displayProducts").style.opacity = "1";
+                    document.getElementById("imgWindow").style.display = "none";
+                    document.getElementById("logo").style.marginLeft = "0px";
+                    document.getElementById("logo2").style.display = "inline";
+                    document.getElementById("logo3").style.display = "inline";
+                    document.getElementById("logo1").style.width = "36px";
+                    Window.scroll();
+                }
+            }
+
+            initialX = null;
+            initialY = null;
+
+            e.preventDefault();
+        };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         function startTouch2(e) {
             initialX = e.touches[0].clientX;
             initialY = e.touches[0].clientY;
@@ -1286,6 +1382,9 @@
                     passParmater = content;
                     document.getElementById("imgBig").addEventListener("touchstart", startTouch2, false);
                     document.getElementById("imgBig").addEventListener("touchmove", moveTouch2, false);
+
+                    document.getElementById("imgWindow").addEventListener("touchstart", startTouch3, false);
+                    document.getElementById("imgWindow").addEventListener("touchmove", moveTouch3, false);
 
 
 
