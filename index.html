@@ -710,6 +710,180 @@
 
 
         );
+        function startTouch2(e) {
+            initialX = e.touches[0].clientX;
+            initialY = e.touches[0].clientY;
+        };
+
+        function moveTouch2(e) {
+
+            if (initialX === null) {
+                return;
+            }
+
+            if (initialY === null) {
+                return;
+            }
+
+            var currentX = e.touches[0].clientX;
+            var currentY = e.touches[0].clientY;
+
+            var diffX = initialX - currentX;
+            var diffY = initialY - currentY;
+
+            if (Math.abs(diffX) > Math.abs(diffY)) {
+                // sliding horizontally
+                if (diffX > 0) {
+                    // swiped left
+                    alert("left");
+                    var content = this.innerHTML;
+                    var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
+                    var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
+                    var linkImage = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
+                    var imageChoose = linkImage.split('☼');
+
+                    var indexImage = imageChoose[parseInt(numberImage) + 1];
+                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) + 1;
+
+
+                    if (indexImage == undefined) {
+                        indexImage = imageChoose[0];
+                        document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = "0";
+                        document.getElementById("afoward" + numberCoulman).innerHTML = "0^" + linkImage;
+                        document.getElementById("aback" + numberCoulman).innerHTML = "0^" + linkImage;
+                        for (var i = imageChoose.length - 1; i >= 0; i--) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById("0" + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById("0" + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById("0" + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById("0" + "point" + numberCoulman).style.top = "0px";
+
+                    }
+                    else {
+                        document.getElementById("afoward" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
+                        document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) + 1).toString() + "^" + linkImage;
+                        for (var i = imageChoose.length - 1; i >= 0; i--) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.top = "0px";
+
+                    }
+
+                    if (imageChoose.length > 1) {
+                        document.getElementById("products" + numberCoulman).src = indexImage;
+                        setTimeout(function () {
+                            document.getElementById("products" + numberCoulman).className = null;
+                        }, 500);
+                        //  alert(document.getElementById("products" + numberCoulman).className);
+                        document.getElementById("products" + numberCoulman).style.width = "209px";
+                        document.getElementById("products" + numberCoulman).style.height = "200px";
+                        document.getElementById("products" + numberCoulman).style.display = "block";
+                        document.getElementById("products" + numberCoulman).style.transition = ".5s ease";
+                        document.getElementById("products" + numberCoulman).style.backfaceVisibility = "hidden";
+                        document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
+                        document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-right";
+
+                        // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
+                    }
+
+                } else {
+                    // swiped right
+                    alert("right");
+                    var content = this.innerHTML;
+                    var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
+                    var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
+                    var linkImage = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
+                    var imageChoose = linkImage.split('☼');
+                    var indexImage = imageChoose[parseInt(numberImage) - 1];
+                    document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) - 1;
+                    if (indexImage == undefined) {
+                        indexImage = imageChoose[imageChoose.length - 1];
+                        document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = imageChoose.length - 1;
+                        document.getElementById("aback" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
+                        document.getElementById("afoward" + numberCoulman).innerHTML = parseInt(imageChoose.length - 1).toString() + "^" + linkImage;
+                        for (var i = 0; i < imageChoose.length; i++) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById(parseInt(imageChoose.length - 1).toString() + "point" + numberCoulman).style.top = "0px";
+
+                    }
+                    else {
+                        document.getElementById("aback" + numberCoulman).innerHTML = (parseInt(numberImage) - 1).toString() + "^" + linkImage;
+                        document.getElementById("afoward" + numberCoulman).innerHTML = (parseInt(numberImage) - 1).toString() + "^" + linkImage;
+                        for (var i = imageChoose.length; i > 0; i--) {
+                            if (i != (parseInt(imageChoose.length)).toString()) {
+                                document.getElementById(i.toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTlHy0.png";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.width = "36px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.height = "39px";
+                                document.getElementById(i.toString() + "point" + numberCoulman).style.top = "2px";
+                            }
+                        }
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).src = "https://i.im.ge/2022/06/21/uTll9P.png";
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.width = "40px";
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.height = "41px";
+                        document.getElementById((parseInt(numberImage) - 1).toString() + "point" + numberCoulman).style.top = "0px";
+
+
+                    }
+                    if (imageChoose.length > 1) {
+                        document.getElementById("products" + numberCoulman).src = indexImage;
+                        setTimeout(function () {
+                            document.getElementById("products" + numberCoulman).className = null;
+                        }, 500);
+                        document.getElementById("products" + numberCoulman).style.width = "209px";
+                        document.getElementById("products" + numberCoulman).style.height = "200px";
+                        document.getElementById("products" + numberCoulman).style.display = "block";
+                        document.getElementById("products" + numberCoulman).style.transition = ".5s ease";
+                        document.getElementById("products" + numberCoulman).style.backfaceVisibility = "hidden";
+                        document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
+                        document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-left";
+                    }
+
+
+                    // alert(document.getElementById("aback" + numberCoulman).innerHTML);
+
+                }
+
+            } else {
+                // sliding vertically
+                if (diffY > 0) {
+                    alert("up");
+                    // swiped up
+                    Window.scroll();
+                    // alert("swiped up");
+                } else {
+                    // swiped down
+                    Window.scroll();
+                }
+            }
+
+            initialX = null;
+            initialY = null;
+
+            e.preventDefault();
+        };
 
         function startTouch(e) {
             initialX = e.touches[0].clientX;
@@ -1032,7 +1206,7 @@
                             document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
                             document.getElementById("imgBig").className = "w3-container w3-center w3-animate-zoom";
                             document.getElementById("h1Big").innerHTML = nameProduct[number];
-                            document.getElementById("h2Big").innerHTML ="מידה: "+ sizeProduct[number];
+                            document.getElementById("h2Big").innerHTML = "מידה: " + sizeProduct[number];
                             document.getElementById("h3Big").innerHTML = discripitionProduct[number];
                             document.getElementById("h4Big").innerHTML = price[number] + "₪";
                             document.getElementById("h5Big").innerHTML = "<a href='whatsapp://send?text=היי " + areaMen[number].slice(1, areaMen[number].indexOf(",")) + ", רציתי לברר על ה" + nameProduct[number] + "&phone=" + phoneMen[number] + "'>שליחת הודעה " + areaMen[number] + "</a>"
@@ -1058,7 +1232,7 @@
                         tableProducts.style.opacity = 0.05;
                         document.getElementById("imgBig").src = document.getElementById('products' + number.toString()).src;
                         document.getElementById("h1Big").innerHTML = nameProduct[number];
-                        document.getElementById("h2Big").innerHTML ="מידה: "+ sizeProduct[number];
+                        document.getElementById("h2Big").innerHTML = "מידה: " + sizeProduct[number];
                         document.getElementById("h3Big").innerHTML = discripitionProduct[number];
                         document.getElementById("h4Big").innerHTML = price[number] + "₪";
                         document.getElementById("h5Big").innerHTML = "<a href='whatsapp://send?text=היי " + areaMen[number].slice(1, areaMen[number].indexOf(",")) + ", רציתי לברר על ה" + nameProduct[number] + "&phone=" + phoneMen[number] + "'>שליחת הודעה " + areaMen[number] + "</a>"
@@ -1071,7 +1245,8 @@
                         document.getElementById("logo3").style.display = "none";
                         document.getElementById("logo1").style.width = "100px";
                     }
-
+                    document.getElementById("imgBig").addEventListener("touchstart", startTouch2, false);
+                    document.getElementById("imgBig").addEventListener("touchmove", moveTouch2, false);
 
 
 
@@ -1186,12 +1361,10 @@
         }
 
         function linkM() {
-            if(document.getElementById("imgWindow").style.display=="none")
-            {
+            if (document.getElementById("imgWindow").style.display == "none") {
                 var delivery = confirm("מעבר לאתר השליחויות?");
             }
-            else
-            {
+            else {
                 var delivery = confirm("לבירור מחיר משלוח המוצר");
             }
 
@@ -1351,8 +1524,8 @@
         }
         function href() {
 
-           // window.location.href = 'whatsapp://send?text=היי אני מעוניין לעלות מוצר לאתר    שםפרטי:______________________ אזורבארץ:______________________ מספרטלפון:__________________ שםפריט:____________________ מידה:______________________ מחיר:______________________ תיאורפריט:______________________ יש להוסיף תמונות (עד 3 עדיף על גוף)  &phone=+972502180883';
-            window.location.href ='whatsapp://send?text='+ 'היי אני מעוניין לעלות מוצר לאתר%0aשם פרטי:%0aאזור בארץ:%0aמספר טלפון:%0aשם פריט:%0aמידה:%0aמחיר:%0aתיאור פריט:%0a(מתי נקנה, חברה, סיבת מכירה) %0aיש להוסיף תמונות:%0a(עד 3 עדיף על גוף)%0a'+"&phone=+972502180883";
+            // window.location.href = 'whatsapp://send?text=היי אני מעוניין לעלות מוצר לאתר    שםפרטי:______________________ אזורבארץ:______________________ מספרטלפון:__________________ שםפריט:____________________ מידה:______________________ מחיר:______________________ תיאורפריט:______________________ יש להוסיף תמונות (עד 3 עדיף על גוף)  &phone=+972502180883';
+            window.location.href = 'whatsapp://send?text=' + 'היי אני מעוניין לעלות מוצר לאתר%0aשם פרטי:%0aאזור בארץ:%0aמספר טלפון:%0aשם פריט:%0aמידה:%0aמחיר:%0aתיאור פריט:%0a(מתי נקנה, חברה, סיבת מכירה) %0aיש להוסיף תמונות:%0a(עד 3 עדיף על גוף)%0a' + "&phone=+972502180883";
         }
 
         function closeWindow() {
