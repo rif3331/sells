@@ -735,7 +735,6 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
-                    alert("left");
                     var content = passParmater;
                     var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
                     var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
@@ -743,7 +742,6 @@
                     var imageChoose = linkImage.split('☼');
 
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
-                    alert(indexImage);
                     document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) + 1;
 
 
@@ -902,8 +900,9 @@
 
                     if (imageChoose.length > 1) {
                         document.getElementById("products" + numberCoulman).src = indexImage;
+                        document.getElementById("imgBig").src = indexImage;
                         setTimeout(function () {
-                            document.getElementById("products" + numberCoulman).className = null;
+                            document.getElementById("imgBig").className = null;
                         }, 500);
                         //  alert(document.getElementById("products" + numberCoulman).className);
                         document.getElementById("products" + numberCoulman).style.width = "209px";
@@ -912,7 +911,7 @@
                         document.getElementById("products" + numberCoulman).style.transition = ".5s ease";
                         document.getElementById("products" + numberCoulman).style.backfaceVisibility = "hidden";
                         document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
-                        document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-right";
+                        document.getElementById("imgBig").className = "w3-container w3-center w3-animate-right";
 
                         // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
                     }
