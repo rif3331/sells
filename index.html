@@ -741,7 +741,7 @@
                     var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
                     var linkImage = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
                     var imageChoose = linkImage.split('☼');
-
+                    alert(imageChoose);
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
                     document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) + 1;
 
@@ -784,7 +784,6 @@
                     }
 
                     if (imageChoose.length > 1) {
-                        alert(indexImage);
                         document.getElementById("products" + numberCoulman).src = indexImage;
                         setTimeout(function () {
                             document.getElementById("products" + numberCoulman).className = null;
