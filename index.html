@@ -1256,6 +1256,10 @@
                     for (var n = 0 ; n < countImages.length; n++) {
                         document.getElementById("pointsTable").innerHTML += "<img id='point" + n.toString() + "' style='width:72px;height:78px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
                         document.getElementById("point" + n.toString()).src= document.getElementById(n.toString()+"point" + number.toString()).src;
+                        if(document.getElementById("point" + n.toString()).src!="https://i.im.ge/2022/06/21/uTlHy0.png")
+                        {
+                            document.getElementById("point" + n.toString()).style.marginTop="-11px" 
+                        }
                     }
                     passParmater = content;
                     document.getElementById("imgBig").addEventListener("touchstart", startTouch2, false);
