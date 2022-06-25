@@ -156,12 +156,7 @@
         function scrollFunction() {
             document.getElementById("logo").className = null;
             if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
-                document.getElementById("displayProducts").style.opacity = "1";
-                document.getElementById("imgWindow").style.display = "none";
-                document.getElementById("logo").style.marginLeft = "0px";
-                document.getElementById("logo2").style.display = "inline";
-                document.getElementById("logo3").style.display = "inline";
-                document.getElementById("logo1").style.width = "36px";
+
 
                 if (sinonWM == "wm") {
                     document.getElementById("tt").style.marginTop = "-265px";
@@ -797,7 +792,7 @@
                         document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
                         document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-right";
                         document.getElementById("imgBig").className = "w3-container w3-center w3-animate-right";
-                        document.getElementById("pointsTable").innerHTML ="<table style='position:absolute;left:1px;top:97px;' id='pointsTable'></table>";;
+                        document.getElementById("pointsTable").innerHTML = "<table id='pointsTable'></table>";;
                         for (var n = 0; n < imageChoose.length; n++) {
                             document.getElementById("pointsTable").innerHTML += "<img id='point" + n.toString() + "' style='width:72px;height:78px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
                             document.getElementById("point" + n.toString()).src = document.getElementById(n.toString() + "point" + numberCoulman.toString()).src;
@@ -869,7 +864,7 @@
                         document.getElementById("products" + numberCoulman).style.backfaceVisibility = "hidden";
                         document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
                         document.getElementById("imgBig").className = "w3-container w3-center w3-animate-left";
-                        document.getElementById("pointsTable").innerHTML ="<table style='position:absolute;left:1px;top:97px;' id='pointsTable'></table>";;
+                        document.getElementById("pointsTable").innerHTML = "<table id='pointsTable'></table>";;
                         for (var n = 0; n < imageChoose.length; n++) {
                             document.getElementById("pointsTable").innerHTML += "<img id='point" + n.toString() + "' style='width:72px;height:78px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
                             document.getElementById("point" + n.toString()).src = document.getElementById(n.toString() + "point" + numberCoulman.toString()).src;
@@ -891,10 +886,24 @@
                 if (diffY > 0) {
                     alert("up");
                     // swiped up
+                    document.getElementById("pointsTable").innerHTML = "<table 'id='pointsTable'></table>";
+                    document.getElementById("displayProducts").style.opacity = "1";
+                    document.getElementById("imgWindow").style.display = "none";
+                    document.getElementById("logo").style.marginLeft = "0px";
+                    document.getElementById("logo2").style.display = "inline";
+                    document.getElementById("logo3").style.display = "inline";
+                    document.getElementById("logo1").style.width = "36px";
                     Window.scroll();
                     // alert("swiped up");
                 } else {
                     // swiped down
+                    document.getElementById("pointsTable").innerHTML = "<table 'id='pointsTable'></table>";
+                    document.getElementById("displayProducts").style.opacity = "1";
+                    document.getElementById("imgWindow").style.display = "none";
+                    document.getElementById("logo").style.marginLeft = "0px";
+                    document.getElementById("logo2").style.display = "inline";
+                    document.getElementById("logo3").style.display = "inline";
+                    document.getElementById("logo1").style.width = "36px";
                     Window.scroll();
                 }
             }
@@ -1560,6 +1569,7 @@
         }
 
         function closeWindow() {
+
             document.getElementById("displayProducts").style.opacity = "1";
             document.getElementById("imgWindow").style.display = "none";
             document.getElementById("logo").style.marginLeft = "0px";
@@ -1569,7 +1579,7 @@
             document.getElementById("logo2").style.display = "inline";
             document.getElementById("logo3").style.display = "inline";
             document.getElementById("logo1").style.width = "36px";
-            document.getElementById("pointsTable").innerHTML = "<table style='position:absolute;left:1px;top:97px;' id='pointsTable'></table>";
+
 
         }
 
