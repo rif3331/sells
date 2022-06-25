@@ -736,7 +736,7 @@
                 if (diffX > 0) {
                     // swiped left
                     alert("left");
-                    var content = this.id;
+                    var content = passParmater;
                     alert(content);
                     var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
                     var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
@@ -1060,7 +1060,7 @@
 
 
 
-
+        var passParmater = "";
         function displayProducts() {
 
             let widthh = screen.width;
@@ -1177,7 +1177,6 @@
                 }
                 cell1.innerHTML += "<img id='0point" + i.toString() + "' style='width:40px;height:40px;' src='https://i.im.ge/2022/06/21/uTll9P.png'><br>";
                 cell1.innerHTML += "<a style= font-size:12px>" + price[i] + "₪</a><br><br>";
-
                 cell1.onclick = function () {
 
                     var content = this.innerHTML;
@@ -1245,6 +1244,7 @@
                         document.getElementById("logo3").style.display = "none";
                         document.getElementById("logo1").style.width = "100px";
                     }
+                    passParmater=content;
                     document.getElementById("imgBig").addEventListener("touchstart", startTouch2, false);
                     document.getElementById("imgBig").addEventListener("touchmove", moveTouch2, false);
 
