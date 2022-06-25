@@ -736,7 +736,7 @@
                 if (diffX > 0) {
                     // swiped left
                     alert("left");
-                    var content = this.innerHTML;
+                    var content = this.id;
                     alert(content);
                     var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
                     var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
