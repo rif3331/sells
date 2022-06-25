@@ -744,10 +744,10 @@
                     var imageChoose = linkImage.split('☼');
                     // alert(parseInt(numberImage)+1);
                     var numberCoulman = content.slice(content.indexOf("id=") + 10, content.indexOf(" src=") - 1);
-                    var centerLinkImage = document.getElementById("products" + numberCoulman).src;
 
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
                     document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) + 1;
+                    alert(indexImage);
 
 
                     if (indexImage == undefined) {
@@ -799,7 +799,6 @@
                         document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
                         document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-left";
                     }
-                    alert(indexImage);
                     // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
 
                 } else {
