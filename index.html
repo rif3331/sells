@@ -801,7 +801,7 @@
 
                         // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
                     }
-                
+
                 }
                 else {
                     // swiped right
@@ -868,10 +868,10 @@
                     // alert(document.getElementById("aback" + numberCoulman).innerHTML);
 
                 }
-            
 
-                 } 
-                 else {
+
+            }
+            else {
                 // sliding vertically
                 if (diffY > 0) {
                     alert("up");
@@ -1044,7 +1044,7 @@
 
                 }
 
-            } 
+            }
             else {
                 // sliding vertically
                 if (diffY > 0) {
@@ -1249,6 +1249,13 @@
                         document.getElementById("logo2").style.display = "none";
                         document.getElementById("logo3").style.display = "none";
                         document.getElementById("logo1").style.width = "100px";
+                    }
+                    var countImages = imageUrl[number].split('☼');
+
+                    // alert(countImages.length);
+                    for (var n = 0 ; n < countImages.length; n++) {
+                        document.getElementById("pointsTable").innerHTML += "<img id='point" + n.toString() + "' style='width:72px;height:78px;position:relative;top:2px' src='https://i.im.ge/2022/06/21/uTlHy0.png'>";
+                        document.getElementById("point" + n.toString()).src= document.getElementById(n.toString()+"point" + number.toString()).src;
                     }
                     passParmater = content;
                     document.getElementById("imgBig").addEventListener("touchstart", startTouch2, false);
@@ -1544,6 +1551,7 @@
             document.getElementById("logo2").style.display = "inline";
             document.getElementById("logo3").style.display = "inline";
             document.getElementById("logo1").style.width = "36px";
+            document.getElementById("pointsTable").innerHTML="<table style='position:absolute;left:1px;top:97px;' id='pointsTable'></table>";
 
         }
 
@@ -1608,6 +1616,7 @@
 
             <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src=""
                 style="width: 400px;height: 500px;margin-left:100px;">
+            <table style='position:absolute;left:1px;top:97px;' id='pointsTable'></table>
             <div id="h2Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
             <div id="h4Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
             <div id="h5Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
