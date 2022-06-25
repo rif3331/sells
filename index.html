@@ -77,7 +77,7 @@
             position: relative;
             display: inline-block;
             font-size: 14px;
-            color: rgb(250, 249, 249);
+            color: rgb(95, 93, 93);
             text-transform: uppercase;
             animation: flip 3s infinite;
             animation-delay: calc(-5s)
@@ -90,8 +90,8 @@
         .waviy span {
             position: relative;
             display: inline-block;
-            font-size: 18px;
-            color: rgb(250, 249, 249);
+            font-size: 20px;
+            color: rgb(95, 93, 93);
             text-transform: uppercase;
             animation: flip 3s infinite;
             animation-delay: calc(-5s)
@@ -128,7 +128,7 @@
             position: fixed;
             height: 400px;
             transition: 0.2s;
-            background-image: url("https://media.gettyimages.com/videos/abstract-stripes-background-loop-video-id946877514?s=640x640");
+            background-image: url("https://i.im.ge/2022/06/25/ur5UzS.png");
             background-size: 143%;
             width: 612px;
         }
@@ -734,7 +734,7 @@
                 // sliding horizontally
                 if (diffX > 0) {
                     // swiped left
-
+               
                 }
                 else {
                     // swiped right
@@ -1616,9 +1616,7 @@
             document.getElementById("tt").style.display = "none";
             document.getElementById("w&m").style.display = "none";
             document.getElementById("kinds").style.display = "inline";
-            document.getElementById("kinds").style.top = "300px";
-            document.getElementById("kinds").style.left = "343px";
-
+            document.getElementById("kinds").style.marginLeft = "110px";
             displayProducts();
         }
         function men() {
@@ -1628,8 +1626,7 @@
             document.getElementById("tg").style.display = "inline";
             document.getElementById("w&m").style.display = "none";
             document.getElementById("kinds").style.display = "inline";
-            document.getElementById("kinds").style.top = "300px";
-            document.getElementById("kinds").style.left = "350px";
+            document.getElementById("kinds").style.marginLeft = "110px";
             displayProducts();
         }
         function home() {
@@ -1692,166 +1689,155 @@
 </head>
 
 <body style="zoom:64% ;" id="body" onload="displayProducts()">
-
     <div style="z-index:2;" id="header">
-        <div style="margin-left:-160px;margin-top:-20px;">
-            <img class="w3-container w3-center w3-animate-zoom" id="logo" src="https://i.im.ge/2022/06/25/urKLFY.png"
-                style="margin-left:250px ;height:400px ;">
-            <table id="logos" style="margin-top:-30px;margin-left:415px;">
+        <img class="w3-container w3-center w3-animate-zoom" id="logo" src="https://i.im.ge/2022/06/18/rGzVi1.png">
+        <table id="logos" style="margin-top:-400px;margin-left:170px;">
+            <tr>
+                <td><img onclick="linkM()" id='logo1'
+                        style='width:36px;height:39px;position:relative;top:2px;cursor:pointer;'
+                        src='https://i.im.ge/2022/06/23/ulItvT.png'></td>
+                <td><img id='logo2' style='width:36px;height:39px;position:relative;top:2px;cursor:pointer;'
+                        src='https://i.im.ge/2022/06/23/ulI0KP.png'></td>
+                <td><img id='logo3' style='width:36px;height:39px;position:relative;top:2px;cursor:pointer;'
+                        src='https://i.im.ge/2022/06/23/ulIjif.png'></td>
+            </tr>
+
+        </table>
+        <table id="w&m" class="w3-container w3-center w3-animate-zoom"
+            style="position:absolute;left:340px;top: 345px;max-width:300px;z-index:8;direction: rtl;">
+            <tr>
+                <td> <button onclick="women()" id="women" style="width:auto;" class="button-28"
+                        role="button">נשים</button>
+                </td>
+                <td> <button onclick="men()" id="men" style="width:auto;" class="button-28" role="button">גברים</button>
+                </td>
+            </tr>
+        </table>
+        <div style="max-width:200px ;">
+            <table id="kinds" class="w3-container w3-center w3-animate-zoom"
+                style="position:absolute;left:310px;top: 349px;max-width:200px;z-index:8;direction: rtl;display:none;">
                 <tr>
-                    <td><img onclick="linkM()" id='logo1'
-                            style='width:36px;height:39px;position:relative;top:2px;cursor:pointer;'
-                            src='https://i.im.ge/2022/06/23/ulItvT.png'></td>
-                    <td><img id='logo2' style='width:36px;height:39px;position:relative;top:2px;cursor:pointer;'
-                            src='https://i.im.ge/2022/06/23/ulI0KP.png'></td>
-                    <td><img id='logo3' style='width:36px;height:39px;position:relative;top:2px;cursor:pointer;'
-                            src='https://i.im.ge/2022/06/23/ulIjif.png'></td>
-                </tr>
+                    <td> <button onclick="cloths()" id="cloths" style="width:auto;" class="button-28"
+                            role="button">בגדים</button></td>
+                    <td> <button onclick="shows()" id="shows" style="width:auto;" class="button-28"
+                            role="button">נעליים</button></td>
+                    <td> <button onclick="bags()" id="bags" style="width:auto;" class="button-28"
+                            role="button">תיקים</button></td>
+                    <td> <button onclick="exsasoriz()" id="exsasoriz" style="width:auto;" class="button-28"
+                            role="button">אקססוריז</button></td>
 
-            </table>
-            <table id="w&m" class="w3-container w3-center w3-animate-zoom"
-                style="position:absolute;left:195px;top: 300px;max-width:300px;z-index:8;direction: rtl;">
-                <tr>
-                    <td> <button onclick="women()" id="women" style="width:auto;" class="button-28"
-                            role="button">נשים</button>
-                    </td>
-                    <td> <button onclick="men()" id="men" style="width:auto;" class="button-28"
-                            role="button">גברים</button>
-                    </td>
+                    <td><img id='home' onclick="home()"
+                            style='width:60px;height:29px;position:relative;top:2px;cursor:pointer;'
+                            src='https://i.im.ge/2022/06/24/uru1rz.png'></td>
                 </tr>
             </table>
-            <div style="max-width:200px ;">
-                <table id="kinds" class="w3-container w3-center w3-animate-zoom"
-                    style="position:absolute;left:310px;top: 349px;max-width:200px;z-index:8;direction: rtl;display:none;">
-                    <tr>
-                        <td> <button onclick="cloths()" id="cloths" style="width:auto;" class="button-28"
-                                role="button">בגדים</button></td>
-                        <td> <button onclick="shows()" id="shows" style="width:auto;" class="button-28"
-                                role="button">נעליים</button></td>
-                        <td> <button onclick="bags()" id="bags" style="width:auto;" class="button-28"
-                                role="button">תיקים</button></td>
-                        <td> <button onclick="exsasoriz()" id="exsasoriz" style="width:auto;" class="button-28"
-                                role="button">אקססוריז</button></td>
+        </div>
 
-                        <td><img id='home' onclick="home()"
-                                style='width:60px;height:29px;position:relative;top:2px;cursor:pointer;'
-                                src='https://i.im.ge/2022/06/24/uru1rz.png'></td>
-                    </tr>
-                </table>
+
+
+
+
+        <div id="imgWindow"
+            style="position:absolute;left:1px;top:97px;z-index:30;display:none;width: 608px;height: 840px;border:solid;">
+            <div id="h1Big" style="text-align:center;font-size: xx-large;direction: rtl;"></div>
+            <div id="h3Big" style="text-align:center;font-size: medium;direction: rtl;"></div>
+
+            <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src=""
+                style="width: 400px;height: 500px;margin-left:100px;">
+            <table style='text-align:center;width:50%;margin-left:25%;' id='pointsTable'></table>
+            <div id="h2Big" style="text-align:center;font-size: large;direction: rtl;"></div>
+            <div id="h4Big" style="text-align:center;font-size: large;direction: rtl;"></div>
+            <img id="swipup" src="https://www.htcexodus.com/media/filer_public/support_zip_img/us/exodus/exodus-one/guid-6fc5472a-8b2a-422e-91b5-a9ef1407f5ae-web.gif"style="width: 140px;height: 120px;position:absolute;left:40px;top:680px">
+            <a style="position:absolute;left:0px;top:780px">לחזרה לפריטים החלק למעלה </a>
+            <img id="swipup2" src="https://www.htc.com/media/filer_public/support/sea/guid-f3895c1f-53d1-479d-a24b-10e612678001-web.gif"style="width: 140px;height: 120px;position:absolute;left:465px;top:680px">
+            <a style="position:absolute;left:410px;top:780px">לתמונות נוספות החלק ימינה</a>
+                        <img onclick="closeWindow()"
+                style="width: 40px;height: 40px;position:absolute;left:3px;top:0px;cursor:pointer;" id="logoCBig"
+                src="https://i.im.ge/2022/06/25/urirb1.png">
+            <div
+                style="height:100px;width: 608px ;background-image: url('https://i.im.ge/2022/06/25/ur5UzS.png');position:absolute;left:-2px;top:838px;">
+                <div id="h5Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
             </div>
-
-
-
-
-
-            <div id="imgWindow"
-                style="position:absolute;left:1px;top:97px;z-index:30;display:none;width: 608px;height: 840px;border:solid;">
-                <div id="h1Big" style="text-align:center;font-size: xx-large;direction: rtl;"></div>
-                <div id="h3Big" style="text-align:center;font-size: medium;direction: rtl;"></div>
-
-                <img class="w3-container w3-center w3-animate-zoom" id="imgBig" src=""
-                    style="width: 400px;height: 500px;margin-left:100px;">
-                <table style='text-align:center;width:50%;margin-left:25%;' id='pointsTable'></table>
-                <div id="h2Big" style="text-align:center;font-size: large;direction: rtl;"></div>
-                <div id="h4Big" style="text-align:center;font-size: large;direction: rtl;"></div>
-                <img id="swipup"
-                    src="https://www.htcexodus.com/media/filer_public/support_zip_img/us/exodus/exodus-one/guid-6fc5472a-8b2a-422e-91b5-a9ef1407f5ae-web.gif"
-                    style="width: 140px;height: 120px;position:absolute;left:40px;top:680px">
-                <a style="position:absolute;left:0px;top:780px">לחזרה לפריטים החלק למעלה </a>
-                <img id="swipup2"
-                    src="https://www.htc.com/media/filer_public/support/sea/guid-f3895c1f-53d1-479d-a24b-10e612678001-web.gif"
-                    style="width: 140px;height: 120px;position:absolute;left:465px;top:680px">
-                <a style="position:absolute;left:410px;top:780px">לתמונות נוספות החלק ימינה</a>
-                <img onclick="closeWindow()"
-                    style="width: 40px;height: 40px;position:absolute;left:3px;top:0px;cursor:pointer;" id="logoCBig"
-                    src="https://i.im.ge/2022/06/25/urirb1.png">
-                <div
-                    style="height:100px;width: 608px ;background-image: url('https://i.im.ge/2022/06/25/ur5UzS.png');position:absolute;left:-2px;top:838px;">
-                    <div id="h5Big" style="text-align:center;font-size: x-large;direction: rtl;"></div>
-                </div>
-            </div>
+        </div>
 
 
 
 
 
 
-            <div id="tt" style="position:absolute;left:30px;top:220px;z-index:5;direction: rtl;width:400px ;"
-                class="waviy">
-                <span style="--i:1">מ</span>
-                <span style="--i:2">כ</span>
-                <span style="--i:3">י</span>
-                <span style="--i:4">ר</span>
-                <span style="--i:5">ו</span>
-                <span style="--i:6">ת</span>
-                <span style="--i:7">&nbsp</span>
-                <span style="--i:8">י</span>
-                <span style="--i:9">ד</span>
-                <span style="--i:10">&nbsp</span>
-                <span style="--i:11">ש</span>
-                <span style="--i:12">נ</span>
-                <span style="--i:13">י</span>
-                <span style="--i:14">י</span>
-                <span style="--i:15">ה</span>
-            </div>
-            <div style="margin-left:-200px;margin-top:-30px ;position: absolute;">
-                <div id="tg" style="position:absolute;left:500px;top:300px;z-index:10;direction: rtl;display: none;"
-                    class="waviy">
-                    <span style="--i:1">ג</span>
-                    <span style="--i:2">ב</span>
-                    <span style="--i:3">ר</span>
-                    <span style="--i:4">י</span>
-                    <span style="--i:5">ם</span>
-                </div>
-                <div id="tn" style="position:absolute;left:510px;top:300px;z-index:10;direction: rtl;display: none;"
-                    class="waviy">
-                    <span style="--i:1">נ</span>
-                    <span style="--i:2">ש</span>
-                    <span style="--i:3">י</span>
-                    <span style="--i:4">ם</span>
-                </div>
-                <div id="ttikim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
-                    class="waviy">
-                    <span style="--i:1">←</span>
-                    <span style="--i:2">ת</span>
-                    <span style="--i:3">י</span>
-                    <span style="--i:4">ק</span>
-                    <span style="--i:5">י</span>
-                    <span style="--i:6">ם</span>
-                </div>
-                <div id="tbgadim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
-                    class="waviy">
-                    <span style="--i:1">←</span>
-                    <span style="--i:2">ב</span>
-                    <span style="--i:3">ג</span>
-                    <span style="--i:4">ד</span>
-                    <span style="--i:5">י</span>
-                    <span style="--i:6">ם</span>
-                </div>
-                <div id="tnalim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
-                    class="waviy">
-                    <span style="--i:1">←</span>
-                    <span style="--i:2">נ</span>
-                    <span style="--i:3">ע</span>
-                    <span style="--i:4">ל</span>
-                    <span style="--i:5">י</span>
-                    <span style="--i:6">י</span>
-                    <span style="--i:7">ם</span>
-                </div>
-                <div id="texso" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
-                    class="waviy">
-                    <span style="--i:1">←</span>
-                    <span style="--i:2">א</span>
-                    <span style="--i:3">ק</span>
-                    <span style="--i:4">ס</span>
-                    <span style="--i:5">ס</span>
-                    <span style="--i:6">ו</span>
-                    <span style="--i:7">ר</span>
-                    <span style="--i:8">י</span>
-                    <span style="--i:9">ז</span>
+        <div id="tt" style="position:absolute;left:180px;top:300px;z-index:5;direction: rtl;width:400px ;"
+            class="waviy">
+            <span style="--i:1">מ</span>
+            <span style="--i:2">כ</span>
+            <span style="--i:3">י</span>
+            <span style="--i:4">ר</span>
+            <span style="--i:5">ו</span>
+            <span style="--i:6">ת</span>
+            <span style="--i:7">&nbsp</span>
+            <span style="--i:8">י</span>
+            <span style="--i:9">ד</span>
+            <span style="--i:10">&nbsp</span>
+            <span style="--i:11">ש</span>
+            <span style="--i:12">נ</span>
+            <span style="--i:13">י</span>
+            <span style="--i:14">י</span>
+            <span style="--i:15">ה</span>
+        </div>
+        <div id="tg" style="position:absolute;left:500px;top:300px;z-index:10;direction: rtl;display: none;"
+            class="waviy">
+            <span style="--i:1">ג</span>
+            <span style="--i:2">ב</span>
+            <span style="--i:3">ר</span>
+            <span style="--i:4">י</span>
+            <span style="--i:5">ם</span>
+        </div>
+        <div id="tn" style="position:absolute;left:510px;top:300px;z-index:10;direction: rtl;display: none;"
+            class="waviy">
+            <span style="--i:1">נ</span>
+            <span style="--i:2">ש</span>
+            <span style="--i:3">י</span>
+            <span style="--i:4">ם</span>
+        </div>
+        <div id="ttikim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+            class="waviy">
+            <span style="--i:1">←</span>
+            <span style="--i:2">ת</span>
+            <span style="--i:3">י</span>
+            <span style="--i:4">ק</span>
+            <span style="--i:5">י</span>
+            <span style="--i:6">ם</span>
+        </div>
+        <div id="tbgadim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+            class="waviy">
+            <span style="--i:1">←</span>
+            <span style="--i:2">ב</span>
+            <span style="--i:3">ג</span>
+            <span style="--i:4">ד</span>
+            <span style="--i:5">י</span>
+            <span style="--i:6">ם</span>
+        </div>
+        <div id="tnalim" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+            class="waviy">
+            <span style="--i:1">←</span>
+            <span style="--i:2">נ</span>
+            <span style="--i:3">ע</span>
+            <span style="--i:4">ל</span>
+            <span style="--i:5">י</span>
+            <span style="--i:6">י</span>
+            <span style="--i:7">ם</span>
+        </div>
+        <div id="texso" style="position:absolute;left:413px;top:300px;z-index:10;direction: rtl;display:none;"
+            class="waviy">
+            <span style="--i:1">←</span>
+            <span style="--i:2">א</span>
+            <span style="--i:3">ק</span>
+            <span style="--i:4">ס</span>
+            <span style="--i:5">ס</span>
+            <span style="--i:6">ו</span>
+            <span style="--i:7">ר</span>
+            <span style="--i:8">י</span>
+            <span style="--i:9">ז</span>
 
-                </div>
-            </div>
         </div>
     </div>
 
@@ -1874,8 +1860,8 @@
 
     <div style="direction:ltr ;">
 
-        <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="300px" onclick="href()"
-            style="border: solid;position:absolute;left:161px;top:7px;z-index:6;font-size:12px;direction: ltr;cursor:pointer;">
+        <marquee behavior="scroll" scrollamount="8" id="line" direction="right" width="200px" onclick="href()"
+            style="border: solid;position:absolute;left:295px;top:7px;z-index:6;font-size:12px;direction: ltr;cursor:pointer;">
             להעלאת מוצר לחץ כאן
         </marquee>
     </div>
