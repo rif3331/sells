@@ -738,8 +738,9 @@
                     alert("left");
                     var content = passParmater;
                     var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
+                    alert(importentData);
                     var aImportentData = importentData.split('^');
-                    alert(aImportentData);
+                    
                     var numberImage = aImportentData[0];
                     var linkImage = aImportentData[1];
                     var imageChoose = linkImage.split('☼');
