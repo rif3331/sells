@@ -737,19 +737,14 @@
                     // swiped left
                     alert("left");
                     var content = passParmater;
-                    var importentData = content.slice(content.indexOf("display:none") + 15, content.indexOf("</a>"));
-                    alert(content);
-                    var aImportentData = importentData.split('^');
-                    
-                    var numberImage = aImportentData[0];
-                    var linkImage = aImportentData[1];
+                    var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
+                    var numberImage = document.getElementById("numberimage" + numberCoulman.toString()).innerHTML;
+                    var linkImage = document.getElementById("imgArray" + numberCoulman.toString()).innerHTML;
                     var imageChoose = linkImage.split('☼');
-                    // alert(parseInt(numberImage)+1);
-                    var numberCoulman = content.slice(content.indexOf("id=") + 10, content.indexOf(" src=") - 1);
 
                     var indexImage = imageChoose[parseInt(numberImage) + 1];
+                    alert(indexImage);
                     document.getElementById("numberimage" + numberCoulman.toString()).innerHTML = parseInt(numberImage) + 1;
-                 
 
 
                     if (indexImage == undefined) {
@@ -788,25 +783,29 @@
                         document.getElementById((parseInt(numberImage) + 1).toString() + "point" + numberCoulman).style.top = "0px";
 
                     }
+
                     if (imageChoose.length > 1) {
                         document.getElementById("products" + numberCoulman).src = indexImage;
                         setTimeout(function () {
                             document.getElementById("products" + numberCoulman).className = null;
                         }, 500);
+                        //  alert(document.getElementById("products" + numberCoulman).className);
                         document.getElementById("products" + numberCoulman).style.width = "209px";
                         document.getElementById("products" + numberCoulman).style.height = "200px";
                         document.getElementById("products" + numberCoulman).style.display = "block";
                         document.getElementById("products" + numberCoulman).style.transition = ".5s ease";
                         document.getElementById("products" + numberCoulman).style.backfaceVisibility = "hidden";
                         document.getElementById("products" + numberCoulman).style.backgroundImage = "none";
-                        document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-left";
-                    }
-                    // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
+                        document.getElementById("products" + numberCoulman).className = "w3-container w3-center w3-animate-right";
 
-                } else {
+                        // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
+                    }
+                
+                }
+                else {
                     // swiped right
                     alert("right");
-                   
+
 
                 }
 
@@ -917,8 +916,8 @@
 
                         // alert(document.getElementById("afoward" + numberCoulman).innerHTML);
                     }
-
-                } else {
+                }
+                else {
                     // swiped right
                     var content = this.innerHTML;
                     var numberCoulman = content.slice(content.indexOf('text') + 4, content.indexOf('"></a>'));
@@ -1188,7 +1187,7 @@
                         document.getElementById("logo3").style.display = "none";
                         document.getElementById("logo1").style.width = "100px";
                     }
-                    passParmater=content;
+                    passParmater = content;
                     document.getElementById("imgBig").addEventListener("touchstart", startTouch2, false);
                     document.getElementById("imgBig").addEventListener("touchmove", moveTouch2, false);
 
